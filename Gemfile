@@ -37,4 +37,6 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+gem 'mysql2'
+gem 'therubyracer'
 gem "rspec-rails", "~> 2.14.0"
