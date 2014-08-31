@@ -1,0 +1,224 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"error",
+				"errorMessage"
+			],
+			[
+				"toHaveBe",
+				"toHaveBeenCalledWith"
+			],
+			[
+				"menucontroller",
+				"menuController"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"\"test\"",
+			"?",
+			"help",
+			"pwd",
+			"products",
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/usr/share/applications/google-chrome.desktop",
+		"/home/glaze/Documents/gallery_api/app/controllers/gallery_controller.rb",
+		"/home/glaze/Documents/gallery_api/app/helpers/pictures_helper.rb",
+		"/home/glaze/Documents/gallery_api/app/views/picture/index.html.erb",
+		"/home/glaze/Documents/gallery_api/app/controllers/pictures_controller.rb",
+		"/home/glaze/Documents/gallery_api/picture_api/config/environment.rb",
+		"/home/glaze/Documents/gallery_api/picture_api/config/application.rb",
+		"/home/glaze/Documents/gallery_api/picture_api/config.ru",
+		"/home/glaze/Documents/gallery_api/config.ru",
+		"/home/glaze/Documents/gallery_api/picture_api/config/routes.rb",
+		"/home/glaze/Documents/gallery_api/picture_api/app/controllers/api/v1/pictures_controller.rb",
+		"/home/glaze/Documents/gallery_api/picture_api/app/models/ApiKey.rb",
+		"/home/glaze/Documents/gallery_api/config/routes.rb",
+		"/home/glaze/Documents/angular_gallery/app/coffee/app.coffee",
+		"/home/glaze/Documents/angular_gallery/app/coffee/controllers.coffee",
+		"/home/glaze/Documents/angular_gallery/app/coffee/directives/menu.coffee",
+		"/home/glaze/Documents/angularjs/angular-seed/app/index.html",
+		"/home/glaze/Documents/angularjs/angular-seed/app/menu.html",
+		"/home/glaze/Documents/angularjs/angular-seed/app/js/directives.js",
+		"/home/glaze/Documents/angularjs/angular-seed/app/js/controllers.js",
+		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/directives.coffee",
+		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/filters.coffee",
+		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/directives/menu.coffee",
+		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/app.coffee",
+		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/controllers/BaseController.coffee",
+		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/controllers/TestController1.coffee",
+		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/controllers.coffee",
+		"/home/glaze/.dosbox/dosbox-0.74.conf",
+		"/home/glaze/.xbindkeysrc",
+		"/home/glaze/Documents/angularjs/angular-seed/app/js/app.js",
+		"/home/glaze/Shortcuts/Processing.desktop",
+		"/home/glaze/Shortcuts/Truecrypt.desktop",
+		"/home/glaze/Shortcuts/Fireworks 4.desktop",
+		"/home/glaze/Shortcuts/Microsoft Word 2010.desktop",
+		"/home/glaze/Shortcuts/League of Legends.desktop",
+		"/home/glaze/Downloads/lexmark/ext/startupinstaller.sh",
+		"/usr/share/pyalienfx/usb/_debug.py",
+		"/usr/share/pyalienfx/usb/backend/libusb10.py"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"'}\n",
+			"CarouselDemoCtrl",
+			"whenLoadMenuJson",
+			"thenAjaxCallIsMadeTo",
+			"givenAjaxCallReturns",
+			"#",
+			"‘",
+			"’",
+			"_check",
+			"xterm"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"CarouselController",
+			"a",
+			"",
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "gallery.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 282.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
