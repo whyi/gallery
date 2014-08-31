@@ -3,9 +3,11 @@ in bundling mysql2 I got some errors, and the following link contains a piece of
 * http://stackoverflow.com/questions/3608287/error-installing-mysql2-failed-to-build-gem-native-extension
 
 == Database
-* rake db to create database
-* rake db:migrate VERSION=20140831004115 to create the table
-
+* Run the following command to reset & migrate the database
+```ruby
+rake db:reset
+rake db:migrate
+```
 == README
 
 This README would normally document whatever steps are necessary to get the
