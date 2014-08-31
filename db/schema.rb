@@ -11,13 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140831004115) do
+ActiveRecord::Schema.define(version: 20140831234527) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
     t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "category_cd"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "filename"
   end
 
 end
