@@ -8,9 +8,10 @@ gem 'simple_enum'
 gem 'pry', :group => :development
 gem 'pry-nav', :group => :development
 gem 'figaro'
-
 group :development, :test do
-  gem "rspec-rails"
+	gem 'factory_girl_rails'
+	gem "rspec-rails"
+	gem "rspec-its"
 end
 
 # Use SCSS for stylesheets
