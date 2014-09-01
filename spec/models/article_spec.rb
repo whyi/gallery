@@ -19,126 +19,24 @@ def build_article_with(attribute_name, attribute_value)
 end
 
 describe Article do
-  ["title", "description", "category_cd", "width", "height", "filename", "year", "medium"].each { |attribute_name|
-    context "article with missing " + attribute_name do  
-      before(:each) {
-        @article = build_article_with_missing(attribute_name)
-      }
-      subject { @article }
-
-      it "is invalid" do
-        expect(@article.valid?).to be false
-      end
-    end
-
-    context "article with blank " + attribute_name do
-      before(:each) {
-        @article = build_article_with_blank(attribute_name)
-      }
-      subject { @article }
-
-      it "is invalid" do
-        expect(@article.valid?).to be false
-      end
-    end
-  }
-
-  context "article with too short title" do
+  context "validation" do
     before(:each) {
-      @article = build_article_with("title", "foo")
+      @article = FactoryGirl.build(:article)
     }
     subject { @article }
 
-    it "is invalid" do
-      expect(@article.valid?).to be false
-    end
-  end
-
-  context "article with too long title" do
-    before(:each) {
-      @article = build_article_with("title", "this_is_longer_than_50_this_is_longer_than_50_this_is_longer_than_50_this_is_longer_than_50_this_is_longer_than_50_this_is_longer_than_50_")
-    }
-    subject { @article }
-
-    it "is invalid" do
-      expect(@article.valid?).to be false
-    end
-  end
-
-  context "article with title length 10 <= length < 50 " do
-    before(:each) {
-      @article = build_article_with("title", "this is a test")
-    }
-    subject { @article }
-
-    it "is valid" do
-      expect(@article.valid?).to be true
-    end
-  end
-
-  context "article with wrong category " do
-    before(:each) {
-      @article = build_article_with("category_cd", 10)
-    }
-    subject { @article }
-
-    it "is invalid" do
-      expect(@article.valid?).to be false
-    end
-  end
-
-  context "article with correct category " do
-    before(:each) {
-      @article = build_article_with("category_cd", 2)
-    }
-    subject { @article }
-
-    it "is valid" do
-      expect(@article.valid?).to be true
-    end
-  end
-
-  context "article with wrong width " do
-    before(:each) {
-      @article = build_article_with("width", -100)
-    }
-    subject { @article }
-
-    it "is invalid" do
-      expect(@article.valid?).to be false
-    end
-  end
-
-  context "article with correct width " do
-    before(:each) {
-      @article = build_article_with("width", 10)
-    }
-    subject { @article }
-
-    it "is valid" do
-      expect(@article.valid?).to be true
-    end
-  end
-
-  context "article with wrong height " do
-    before(:each) {
-      @article = build_article_with("height", -100)
-    }
-    subject { @article }
-
-    it "is invalid" do
-      expect(@article.valid?).to be false
-    end
-  end
-
-  context "article with correct height " do
-    before(:each) {
-      @article = build_article_with("height", 10)
-    }
-    subject { @article }
-
-    it "is valid" do
-      expect(@article.valid?).to be true
-    end
+    it { should validate_presence_of("title") }
+    it { should ensure_length_of("title").is_at_least(10).is_at_most(49) }
+    it { should validate_presence_of("description") }
+    it { should validate_presence_of("category_cd") }
+    it { should ensure_inclusion_of("category_cd").in_range(0..2) }
+    it { should validate_presence_of("width") }
+    it { should ensure_inclusion_of("width").in_range(10..200) }
+    it { should validate_presence_of("height") }
+    it { should ensure_inclusion_of("height").in_range(10..200) }
+    it { should validate_presence_of("filename") }
+    it { should validate_presence_of("year") }
+    it { should ensure_inclusion_of("year").in_range(2010..Date.today.year) }
+    it { should validate_presence_of("medium") }
   end
 end
