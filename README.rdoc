@@ -8,6 +8,10 @@ in bundling mysql2 I got some errors, and the following link contains a piece of
 rake db:reset
 rake db:migrate
 ```
+
+== Test
+* rspec will run the all test
+* to manually create a test : rails generate rspec:???? name
 == README
 
 This README would normally document whatever steps are necessary to get the

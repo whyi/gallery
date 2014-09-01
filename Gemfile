@@ -8,6 +8,11 @@ gem 'simple_enum'
 gem 'pry', :group => :development
 gem 'pry-nav', :group => :development
 gem 'figaro'
+
+group :development, :test do
+  gem "rspec-rails"
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.0.beta1'
 # Use Uglifier as compressor for JavaScript assets
