@@ -19,15 +19,15 @@ def build_article_with(attribute_name, attribute_value)
 end
 
 describe Article do
-  ["title", "description", "category_cd", "width", "height", "filename"].each { |attribute_name|
+  ["title", "description", "category_cd", "width", "height", "filename", "year", "medium"].each { |attribute_name|
     context "article with missing " + attribute_name do  
       before(:each) {
         @article = build_article_with_missing(attribute_name)
       }
       subject { @article }
 
-      it "cannot be saved" do
-        expect(@article.save).to be false
+      it "is invalid" do
+        expect(@article.valid?).to be false
       end
     end
 
@@ -37,8 +37,8 @@ describe Article do
       }
       subject { @article }
 
-      it "cannot be saved" do
-        expect(@article.save).to be false
+      it "is invalid" do
+        expect(@article.valid?).to be false
       end
     end
   }
@@ -49,8 +49,8 @@ describe Article do
     }
     subject { @article }
 
-    it "cannot be saved" do
-      expect(@article.save).to be false
+    it "is invalid" do
+      expect(@article.valid?).to be false
     end
   end
 
@@ -60,8 +60,8 @@ describe Article do
     }
     subject { @article }
 
-    it "cannot be saved" do
-      expect(@article.save).to be false
+    it "is invalid" do
+      expect(@article.valid?).to be false
     end
   end
 
@@ -71,8 +71,8 @@ describe Article do
     }
     subject { @article }
 
-    it "can be saved" do
-      expect(@article.save).to be true
+    it "is valid" do
+      expect(@article.valid?).to be true
     end
   end
 
@@ -82,8 +82,8 @@ describe Article do
     }
     subject { @article }
 
-    it "cannot be saved" do
-      expect(@article.save).to be false
+    it "is invalid" do
+      expect(@article.valid?).to be false
     end
   end
 
@@ -93,8 +93,8 @@ describe Article do
     }
     subject { @article }
 
-    it "can be saved" do
-      expect(@article.save).to be true
+    it "is valid" do
+      expect(@article.valid?).to be true
     end
   end
 
@@ -104,8 +104,8 @@ describe Article do
     }
     subject { @article }
 
-    it "cannot be saved" do
-      expect(@article.save).to be false
+    it "is invalid" do
+      expect(@article.valid?).to be false
     end
   end
 
@@ -115,8 +115,8 @@ describe Article do
     }
     subject { @article }
 
-    it "can be saved" do
-      expect(@article.save).to be true
+    it "is valid" do
+      expect(@article.valid?).to be true
     end
   end
 
@@ -126,8 +126,8 @@ describe Article do
     }
     subject { @article }
 
-    it "cannot be saved" do
-      expect(@article.save).to be false
+    it "is invalid" do
+      expect(@article.valid?).to be false
     end
   end
 
@@ -137,8 +137,8 @@ describe Article do
     }
     subject { @article }
 
-    it "can be saved" do
-      expect(@article.save).to be true
+    it "is valid" do
+      expect(@article.valid?).to be true
     end
   end
 end

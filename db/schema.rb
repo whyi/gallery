@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140831234527) do
+ActiveRecord::Schema.define(version: 20140901110307) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20140831234527) do
     t.integer  "width"
     t.integer  "height"
     t.string   "filename"
+    t.string   "medium"
+    t.integer  "year"
   end
 
 end
