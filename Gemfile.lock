@@ -79,6 +79,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
+    mash (0.1.1)
     method_source (0.8.2)
     mime-types (2.3)
     mini_portile (0.6.0)
@@ -184,12 +185,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   byebug
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   figaro
   jbuilder (~> 2.0)
   jquery-rails
+  mash
   mysql2
   pry
   pry-nav
