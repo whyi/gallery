@@ -1,0 +1,15 @@
+<h1>Listing arts</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @arts.each do |art| %>
+    <tr>
+      <td><%= art.title %></td>
+      <td><%= art.description %></td>
+    </tr>
+  <% end %>
+</table>
