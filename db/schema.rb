@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140901110307) do
 
-  create_table "articles", force: true do |t|
+  create_table "arts", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at",  null: false

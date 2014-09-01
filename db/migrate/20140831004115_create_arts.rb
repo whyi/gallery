@@ -1,6 +1,6 @@
-class CreateArticles < ActiveRecord::Migration
+class CreateArts < ActiveRecord::Migration
   def change
-    create_table :articles do |t|
+    create_table :arts do |t|
       t.string :title
       t.text :description
       t.timestamps null: false
