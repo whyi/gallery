@@ -7,7 +7,7 @@ class Articles < ActiveRecord::Migration
   end
 
   def down
-    remove_column :users, :category_cd
+    remove_column :articles, :category_cd
     remove_column :articles, :width
     remove_column :articles, :height
     remove_column :articles, :filename
