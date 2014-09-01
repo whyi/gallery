@@ -1,7 +1,4 @@
 require 'rails_helper'
-require 'active_support/core_ext/hash'
-
-ARTICLE_FIELDS = 
 
 def build_article_with_missing(attribute_name)
     @article = FactoryGirl.build(:article)
