@@ -1,23 +1,5 @@
 require 'rails_helper'
 
-def build_article_with_missing(attribute_name)
-    @article = FactoryGirl.build(:article)
-    @article[attribute_name] = nil
-    @article
-end
-
-def build_article_with_blank(attribute_name)
-    @article = FactoryGirl.build(:article)
-    @article[attribute_name] = ""
-    @article
-end
-
-def build_article_with(attribute_name, attribute_value)
-    @article = FactoryGirl.build(:article)
-    @article[attribute_name] = attribute_value
-    @article
-end
-
 describe Article do
   context "validation" do
     before(:each) {
