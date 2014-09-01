@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 
 	def create
 	  @article = Article.new(article_params)
-
+	  @article.process_uploaded_file(article_params[:filename])
 	  @article.save
 	  redirect_to @article	  
 	end

@@ -42,6 +42,7 @@ GEM
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
+    coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -54,6 +55,9 @@ GEM
     debugger-linecache (1.2.0)
     erubis (2.7.0)
     execjs (2.2.1)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     globalid (0.2.3)
       activesupport (>= 4.1.0)
     hike (1.2.3)
@@ -69,6 +73,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.3)
     mini_portile (0.6.0)
     minitest (5.4.1)
@@ -76,6 +81,12 @@ GEM
     mysql2 (0.3.16)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-nav (0.2.4)
+      pry (>= 0.9.10, < 0.11.0)
     rack (1.6.0.beta)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -150,9 +161,12 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.0.0)
+  figaro
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
+  pry
+  pry-nav
   rails (= 4.2.0.beta1)
   rails-html-sanitizer (~> 1.0)
   sass-rails (~> 5.0.0.beta1)

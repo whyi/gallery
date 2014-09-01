@@ -1,0 +1,4 @@
+development:
+  UPLOADED_FILE_PATH: "tmp"
+production:
+  UPLOADED_FILE_PATH: ""

@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0.beta1'
 gem 'mysql2'
 gem 'simple_enum'
+gem 'pry', :group => :development
+gem 'pry-nav', :group => :development
+gem 'figaro'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.0.beta1'
 # Use Uglifier as compressor for JavaScript assets
