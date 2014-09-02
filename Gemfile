@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0.beta1'
@@ -8,13 +8,19 @@ gem 'simple_enum'
 gem 'pry', :group => :development
 gem 'pry-nav', :group => :development
 gem 'figaro'
-
+gem 'responders'
 group :development, :test do
 	gem 'factory_girl_rails'
 	gem "rspec-rails"
 	gem "rspec-its"
   gem 'shoulda-matchers'
 end
+
+gem 'rails-assets-bootstrap'
+gem 'rails-assets-angular'
+gem 'rails-assets-angular-route'
+gem 'rails-assets-angular-bootstrap'
+gem 'rails-assets-angular-deckgrid'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.0.beta1'

@@ -1,14 +1,27 @@
+<!-- app/views/layouts/application.html.erb -->
+
 <!DOCTYPE html>
-<html>
+<html ng-app="gallery">
 <head>
   <title>Gallery</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-controller="MenuController">
+<h1>{{title}}</h1>
 
-<%= yield %>
+<div deckgrid class="deckgrid" source="arts">
+    <div class="a-card">
+        <h1>{{card.title}}</h1>
+
+        <img src="" data-ng-src="{{card.src}}">
+    </div>
+</div>
+
+<div ng-view>
+  <%= yield %>
+</div>
 
 </body>
 </html>

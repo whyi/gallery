@@ -1,4 +1,5 @@
 class ArtsController < ApplicationController
+	respond_to :json
 	def new
 	end
 
@@ -10,7 +11,11 @@ class ArtsController < ApplicationController
 	end
 
 	def index
-	  @arts = Art.all
+		@arts = Art.all
+		respond_to do |format|
+		  format.html
+		  format.json { render json: @arts }
+		 end
 	end
 
 	def show
