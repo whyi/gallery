@@ -1,0 +1,30 @@
+.title
+{
+  font-family: 'Finger Paint', cursive;
+  font-size : 23pt;
+  color : #000000;
+}
+
+.title A:link
+{
+  font-family: 'Finger Paint', cursive;
+  font-size : 23pt;
+  color : #000000;
+  text-decoration:none;
+}
+
+.title A:visited
+{
+  font-family: 'Finger Paint', cursive;
+  font-size : 23pt;
+  color : #000000;
+  text-decoration:none;
+}
+
+.title A:hover
+{
+  font-family: 'Finger Paint', cursive;
+  font-size : 23pt;
+  color : #000000;
+  text-decoration:underline;
+}

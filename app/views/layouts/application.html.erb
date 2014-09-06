@@ -7,12 +7,28 @@
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Signika" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Finger+Paint" />
 </head>
+
 <body ng-controller="MenuController">
 
-<a href = "#" class = "button" ng-click="setCategory(0)">test0</a>
-<a href = "#" class = "button" ng-click="setCategory(1)">test1</a>
-<a href = "#" class = "button" ng-click="setCategory(2)">test2</a>
+<table width = "100%">
+<tr>
+  <td width = "30%" align = "right">
+    <h1 class = "title">
+      <a ng-sref="home" href="#">HYUNJU KIM</a>
+    </h1>
+  </td>
+  <td class = "links" align = "right">
+    <a ng-sref="studies" href = "#" class = "button" ng-click="setCategory(0)">studies</a>/
+    <a ng-sref="themes" href = "#" class = "button" ng-click="setCategory(1)">themes</a>/
+    <a ng-sref="drawings" href = "#" class = "button" ng-click="setCategory(2)">drawings</a>/
+    <a ng-sref="artistInfo" href = "#" class = "button" ng-click="setCategory(2)">artistInfo</a>
+  <td width = "20%"></td>
+</tr>
+</table>
 
 <li ng-repeat="art in arts | filter:{category_cd:getCategory()}">
   {{art.title}} | {{art.category_cd}} | {{art.width}} by {{art.height}}
