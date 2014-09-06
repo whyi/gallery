@@ -9,15 +9,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-controller="MenuController">
-<h1>{{title}}</h1>
 
-<div deckgrid class="deckgrid" source="arts">
-    <div class="a-card">
-        <h1>{{card.title}}</h1>
+<a href = "#" class = "button" ng-click="setCategory(0)">test0</a>
+<a href = "#" class = "button" ng-click="setCategory(1)">test1</a>
+<a href = "#" class = "button" ng-click="setCategory(2)">test2</a>
 
-        <img src="" data-ng-src="{{card.src}}">
-    </div>
-</div>
+<li ng-repeat="art in arts | filter:{category_cd:getCategory()}">
+  {{art.title}} | {{art.category_cd}} | {{art.width}} by {{art.height}}
+</li>
+
 
 <div ng-view>
   <%= yield %>

@@ -1,17 +1,199 @@
-// Place all the styles related to the articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.deckgrid[deckgrid]::before {
-    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
-    content: '4 .column.column-1-4';
-    font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
-    visibility: hidden;
+@charset "UTF-8";
+ul, li{
+    margin:0;
+    padding:0;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#wrapper{
+    width:910px;
+    margin:50px auto;
+    padding:30px;
+    border-radius:10px;
+    background:#fff;
+    box-shadow: 0 0 20px 0px #000;
 }
 
-.deckgrid .column {
-    float: left;
+ul{
+    list-style:none;
+}
+#slider{
+    border:0px solid #999;
+    margin:15px auto;   
+}
+#sliderNavigation, #sliderPagination{
+    text-align:center;
+    font-size:14px;
 }
 
-.deckgrid .column-1-4 {
-    width: 25%;
+#sliderNavigation{
+    padding:0 30px;
+}
+#sliderNavigation a, #sliderPagination a{
+    text-decoration:none;
+    color:#777;
+}
+#sliderPagination ul{
+    text-align:center;
+}
+#sliderPagination ul li{
+    display:inline-block;
+    padding-top:4px;
+}
+#sliderPagination a{
+    display:inline-block;
+    border-radius:8px;
+    height:16px;
+    width:16px;
+    text-indent:-54321px;
+    background:#ccc;
+    margin:0 5px;
+}
+#sliderPagination a:hover{
+    background:#aaa;
+}
+#sliderPagination a.nav_current_slide{
+    background:#777;
+}
+#sliderNavigation a.previous_page{
+    font-size:50px;
+    float:left;
+}
+#sliderNavigation a.next_page{
+    font-size:50px;
+    float:right;
+}
+p{
+    font-size:14px;
+    color:#666;
+    line-height:140%;   
+}
+#jupiter_title{
+    padding:340px 50px 0 50px;
+}
+#jupiter_text{
+    font-family: 'Noticia Text', serif;
+    font-weight: bold;
+    color:#000000;
+    padding:440px 10px 0px 40px;
+}
+
+#pic_2_text{
+    font-family: 'Noticia Text', serif;
+    font-weight: bold;
+    color:#000000;
+    padding:440px 0px 0px 550px;
+}
+
+#pic_3_text{
+    font-family: 'Noticia Text', serif;
+    font-weight: bold;
+    color:#000000;
+    padding:440px 0px 0px 670px;
+}
+
+#pic_4_text{
+    font-family: 'Noticia Text', serif;
+    font-weight: bold;
+    color:#000000;
+    padding:440px 10px 0px 40px;
+}
+
+#pic_5_text{
+    font-family: 'Noticia Text', serif;
+    font-weight: bold;
+    color:#000000;
+    padding:440px 0px 0px 550px;
+}
+
+#raygun_title{
+    padding:20px 50px 0 30px;
+}
+#raygun_text{
+    padding:15px 600px 0 30px;  
+}
+#darts_title{
+    padding:20px 50px 0 30px;
+}
+#darts_text{
+    padding:15px 410px 0 30px;  
+}
+
+
+#default{
+    margin:0 auto;
+    width:910px;
+}
+#default > li{
+    clear:both;
+}
+#default, #default li{
+    list-style:none;
+    margin:0;
+    padding:0;
+    font-size:13px;
+    color:#333;
+}
+#default li li{
+    float:left;
+    padding:8px 5px;
+    border-top:1px solid #ccc;
+}
+#default ul li:first-child{
+    clear:both;
+    width:150px;
+    background: #ddd;
+    border-left: 1px solid #ccc;
+}
+#default ul li:first-child + li{
+    width:100px;
+    background: #eee;
+}
+#default ul li:first-child + li + li{
+    width:120px;
+    background: #ddd;
+}
+#default ul li:first-child + li + li + li{
+    width:498px;
+    background: #eee;
+    border-right: 1px solid #ccc;
+}
+#default > li:last-child li{
+    border-bottom:1px solid #ccc;
+}
+#default pre{
+    color:#333;
+}
+
+.round_top_left{
+    border-radius:8px 0 0 0 ;
+}
+.round_top_right{
+    border-radius:0 8px 0 0 ;
+}
+.round_bottom_right{
+    border-radius:0 0 8px 0 ;
+}
+.round_bottom_left{
+    border-radius:0 0 0 8px ;
+}
+.clear_both{
+    display:block;
+    clear:both;
+}
+.sample_markup{
+    background:#272922;
+    padding:10px 10px 0 10px;
+    width:400px;
+    float:left;
+    height:180px;
+    margin-right:15px;
+}
+.wide_markup{
+    width:700px;    
+    height:240px;
+}
+.markup_auto{
+    height:auto;
+    padding:10px;
 }

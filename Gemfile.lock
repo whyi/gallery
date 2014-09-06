@@ -38,6 +38,8 @@ GEM
     arel (6.0.0.beta1)
     binding_of_caller (0.7.3.pre1)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.2.0.1)
+      sass (~> 3.2)
     builder (3.2.2)
     byebug (3.3.0)
       columnize (~> 0.8)
@@ -115,7 +117,7 @@ GEM
       rails-assets-angular (~> 1.2.0)
     rails-assets-angular-route (1.2.23)
       rails-assets-angular (= 1.2.23)
-    rails-assets-bootstrap (3.2.0)
+    rails-assets-bootstrap-sass (3.0.2)
       rails-assets-jquery (>= 1.9.0)
     rails-assets-jquery (2.1.1)
     rails-deprecated_sanitizer (1.0.2)
@@ -199,6 +201,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   byebug
   coffee-rails (~> 4.0.0)
   factory_girl_rails
@@ -213,7 +216,7 @@ DEPENDENCIES
   rails-assets-angular-bootstrap
   rails-assets-angular-deckgrid
   rails-assets-angular-route
-  rails-assets-bootstrap
+  rails-assets-bootstrap-sass
   rails-html-sanitizer (~> 1.0)
   responders
   rspec-its

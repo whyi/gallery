@@ -13,6 +13,7 @@ class MenuController extends BaseController
     @$scope.title = "tesT"
     @$scope.arts = {}
     @loadArts()
+    @$scope.categoryId = 0
 
   reportError:(errorMessage=DEFAULT_ERROR_MESSAGE) ->
     @$scope.errorMessage = errorMessage
@@ -23,3 +24,11 @@ class MenuController extends BaseController
         @$scope.arts = response
       .error (response) =>
         @reportError(response["errorMessage"])
+
+  setCategory: (categoryId) ->
+    console.log("categoryId " + categoryId)
+    @$scope.categoryId = categoryId
+
+  getCategory: ->
+    console.log("returning categoryId " + @$scope.categoryId)
+    @$scope.categoryId

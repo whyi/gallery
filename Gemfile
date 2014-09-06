@@ -16,7 +16,8 @@ group :development, :test do
   gem 'shoulda-matchers'
 end
 
-gem 'rails-assets-bootstrap'
+gem 'bootstrap-sass'
+gem 'rails-assets-bootstrap-sass'
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-route'
 gem 'rails-assets-angular-bootstrap'
