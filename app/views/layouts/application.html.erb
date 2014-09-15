@@ -31,16 +31,15 @@
 </tr>
 </table>
 </div>
-
+<%=yield%>
 <div ui-view>
 <li ng-repeat="art in arts | filter:{category_cd:getCategory()}">
   {{art.title}} | {{art.category_cd}} | {{art.width}} by {{art.height}}
+  {{art.filename}}
+  <img src="{{art.filename}}">
 </li>
 <div>
 
-<div ng-view>
-  <%= yield %>
-</div>
 
 </body>
 </html>

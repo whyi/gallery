@@ -13,11 +13,12 @@ class Art < ActiveRecord::Base
 
 	def process_uploaded_file(file)
 		name =  file.original_filename
-		directory = File.join(Rails.root, ENV["UPLOADED_FILE_PATH"])
+		directory = File.join(Rails.root, ENV["UPLOADED_FILE_ABSOLUTE_PATH"])
 		# create the file path
 		path = File.join(directory, name)
 		# write the file
 		File.open(path, "wb") { |f| f.write(file.read) }
-		self.filename = path
+    # remove the path(original file path) from here
+		self.filename = File.join(ENV["UPLOADED_FILE_RELATIVE_PATH"], name)
 	end
 end

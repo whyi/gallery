@@ -1,4 +1,6 @@
 development:
-  UPLOADED_FILE_PATH: "tmp"
+  UPLOADED_FILE_ABSOLUTE_PATH: "public/images"
+  UPLOADED_FILE_RELATIVE_PATH: "/images"
 production:
-  UPLOADED_FILE_PATH: ""
+  UPLOADED_FILE_ABSOLUTE_PATH: "public/images"
+  UPLOADED_FILE_RELATIVE_PATH: "/images"

@@ -1,7 +1,6 @@
 app = angular
-  .module( 'gallery', ['ngRoute', 'ui.bootstrap', 'akoenig.deckgrid', 'ui.router'])
+  .module( 'gallery', ['ngRoute', 'ui.bootstrap', 'ui.router'])
   .config( ['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) ->
-    $urlRouterProvider.otherwise("/home")
     $stateProvider
       .state('home', {
         url: "/home",

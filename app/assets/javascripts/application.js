@@ -17,7 +17,6 @@
 //= require angular-ui-router
 //= require angular-route
 //= require angular-bootstrap
-//= require angular-deckgrid
 //= require bootstrap
 //= require app/app
 //= require app/controllers/BaseController
