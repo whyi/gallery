@@ -117,6 +117,8 @@ GEM
       rails-assets-angular (~> 1.2.0)
     rails-assets-angular-route (1.2.23)
       rails-assets-angular (= 1.2.23)
+    rails-assets-angular-ui-router (0.2.11)
+      rails-assets-angular (>= 1.0.8)
     rails-assets-bootstrap-sass (3.0.2)
       rails-assets-jquery (>= 1.9.0)
     rails-assets-jquery (2.1.1)
@@ -216,6 +218,7 @@ DEPENDENCIES
   rails-assets-angular-bootstrap
   rails-assets-angular-deckgrid
   rails-assets-angular-route
+  rails-assets-angular-ui-router
   rails-assets-bootstrap-sass
   rails-html-sanitizer (~> 1.0)
   responders

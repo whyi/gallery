@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require angular
+//= require angular-ui-router
 //= require angular-route
 //= require angular-bootstrap
 //= require angular-deckgrid

@@ -22,6 +22,7 @@ gem 'rails-assets-angular'
 gem 'rails-assets-angular-route'
 gem 'rails-assets-angular-bootstrap'
 gem 'rails-assets-angular-deckgrid'
+gem 'rails-assets-angular-ui-router'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.0.beta1'

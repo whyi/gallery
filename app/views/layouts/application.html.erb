@@ -14,26 +14,29 @@
 
 <body ng-controller="MenuController">
 
+<div id = "header">
 <table width = "100%">
 <tr>
   <td width = "30%" align = "right">
     <h1 class = "title">
-      <a ng-sref="home" href="#">HYUNJU KIM</a>
+      <a ui-sref="home">HYUNJU KIM</a>
     </h1>
   </td>
   <td class = "links" align = "right">
-    <a ng-sref="studies" href = "#" class = "button" ng-click="setCategory(0)">studies</a>/
-    <a ng-sref="themes" href = "#" class = "button" ng-click="setCategory(1)">themes</a>/
-    <a ng-sref="drawings" href = "#" class = "button" ng-click="setCategory(2)">drawings</a>/
-    <a ng-sref="artistInfo" href = "#" class = "button" ng-click="setCategory(2)">artistInfo</a>
+    <a ui-sref="studies" class = "button">studies</a>/
+    <a ui-sref="themes" class = "button">themes</a>/
+    <a ui-sref="drawings"  class = "button">drawings</a>/
+    <a ui-sref="artist_info" class = "button">artist info</a>
   <td width = "20%"></td>
 </tr>
 </table>
+</div>
 
+<div ui-view>
 <li ng-repeat="art in arts | filter:{category_cd:getCategory()}">
   {{art.title}} | {{art.category_cd}} | {{art.width}} by {{art.height}}
 </li>
-
+<div>
 
 <div ng-view>
   <%= yield %>
