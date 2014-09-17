@@ -1,5 +1,8 @@
 == windows
 * get the latest RubyInstaller and Devkit from http://rubyinstaller.org/downloads/
+* devkit installation is little bit tricky but details are at https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
+* basically it's all about ruby dk.rb init && ruby dk.rb install && gem install json --platform=ruby
+* (todo:automate this)
 * gem install bundler
 * bundle install
 
