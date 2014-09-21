@@ -1,6 +1,7 @@
 app = angular
   .module( 'gallery', ['ngRoute', 'ui.bootstrap', 'ui.router'])
   .config( ['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) ->
+    
     $stateProvider
       .state('home', {
         url: "/home",

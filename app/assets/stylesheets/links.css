@@ -1,0 +1,44 @@
+.links
+{
+  font-family : 'Petrona', serif;
+  font-size : 12pt;
+  font-weight : bold;
+  color : gray;
+}
+
+.links a
+{
+  font-family : 'Petrona', serif;
+  font-size : 12pt;
+  text-decoration : none;
+  color : gray;
+}
+
+.links a:link
+{
+  font-family : 'Petrona', serif;
+  font-size : 12pt;
+  color : gray;
+}
+
+.links a:visited
+{
+  font-family : 'Petrona', serif;
+  font-size : 12pt;
+  color : gray;
+}
+
+.links a:active
+{
+  font-family : 'Petrona', serif;
+  font-size : 12pt;
+  color : #111111;
+}
+
+.links a:hover
+{
+  font-family : 'Petrona', serif;
+  font-size : 12pt;
+  text-decoration : none;
+  color : #111111;
+}

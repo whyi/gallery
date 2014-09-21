@@ -1,4 +1,7 @@
 class ArtsController < ApplicationController
+	before_filter :authenticate_user_and_redirect, :only => [:new, :create]
+	before_filter :authenticate_user, :only => [:index, :show]
+
 	def new
 	end
 
@@ -6,12 +9,15 @@ class ArtsController < ApplicationController
 	  @art = Art.new(art_params)
 	  @art.process_uploaded_file(art_params[:filename])
 	  @art.save
-	  redirect_to @art	  
+	  redirect_to @art
 	end
 
 	def index
 		@arts = Art.all
-		render json: @arts
+		respond_to do |format|
+			format.html
+			format.json { render json: @arts }
+		end
 	end
 
 	def show

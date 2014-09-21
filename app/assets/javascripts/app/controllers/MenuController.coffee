@@ -5,12 +5,12 @@ class MenuController extends BaseController
 
   @inject '$scope', '$http'
  
-  ARTS_PATH = "/arts"
+  ARTS_PATH = "/arts.json"
   DEFAULT_ERROR_MESSAGE = "Sorry, there was an error occurred."
 
   # initialize the controller
   initialize: ->
-    @$scope.title = "tesT"
+    @$scope.title = "test"
     @$scope.arts = {}
     @loadArts()
     @$scope.categoryId = 0

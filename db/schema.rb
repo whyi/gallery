@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140901110307) do
+ActiveRecord::Schema.define(version: 20140920221336) do
 
   create_table "arts", force: true do |t|
     t.string   "title"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 20140901110307) do
     t.string   "filename"
     t.string   "medium"
     t.integer  "year"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "encrypted_password"
+    t.string   "salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

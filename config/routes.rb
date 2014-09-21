@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+ 
+  match "signup", :to => "users#new", via: [:get]
+  match "login", :to => "sessions#login", via: [:get, :post]
+  match "logout", :to => "sessions#logout", via: [:get]
+  match "profile", :to => "sessions#profile", via: [:get]
+  match "setting", :to => "sessions#setting", via: [:get]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  resources :arts, :constraints => {:format => [:html, :json]}
-  
-  root 'welcome#index'
+  resources :arts
+  resources :users
+  root 'arts#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -18,7 +23,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  # Example resource route with options:
+  # ExaZZmple resource route with options:
   #   resources :products do
   #     member do
   #       get 'short'
