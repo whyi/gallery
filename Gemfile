@@ -21,7 +21,6 @@ gem 'rails-assets-bootstrap-sass'
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-route'
 gem 'rails-assets-angular-bootstrap'
-gem 'rails-assets-angular-deckgrid'
 gem 'rails-assets-angular-ui-router'
 
 gem 'bcrypt-ruby', :require => 'bcrypt'

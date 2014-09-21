@@ -116,8 +116,6 @@ GEM
     rails-assets-angular (1.2.23)
     rails-assets-angular-bootstrap (0.11.0)
       rails-assets-angular (>= 1)
-    rails-assets-angular-deckgrid (0.4.4)
-      rails-assets-angular (~> 1.2.0)
     rails-assets-angular-route (1.2.23)
       rails-assets-angular (= 1.2.23)
     rails-assets-angular-ui-router (0.2.11)
@@ -220,7 +218,6 @@ DEPENDENCIES
   rails (= 4.2.0.beta1)
   rails-assets-angular
   rails-assets-angular-bootstrap
-  rails-assets-angular-deckgrid
   rails-assets-angular-route
   rails-assets-angular-ui-router
   rails-assets-bootstrap-sass

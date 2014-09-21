@@ -1,3 +1,9 @@
-<li ng-repeat="art in arts | filter:{category_cd:0}">
-  {{art.title}} | {{art.category_cd}} | {{art.width}} by {{art.height}}
-</li>
+<div class="row-fluid">
+  <div class="col-xs-4 col-sm-3 col-md-2" ng-repeat="art in arts | filter:{category_cd:0}">
+    <div class="imageContainer">
+        <a href="/images/idiocracy.jpg" data-lightbox="roadtrip">
+        <img class="art" src="" data-ng-src = "{{art.filename}}" class="img-center">
+        </a>
+    </div>
+  </div>
+</div>

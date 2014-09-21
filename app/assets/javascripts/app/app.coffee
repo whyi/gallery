@@ -26,6 +26,11 @@ app = angular
     ]
 )
 
+app.run( ($rootScope, $state, $stateParams) ->
+  $rootScope.$state = $state
+  $rootScope.$stateParams = $stateParams
+)
+
 root = exports ? this
 unless root.app
   root.app = app

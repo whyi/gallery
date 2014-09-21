@@ -6,14 +6,12 @@ class MenuController extends BaseController
   @inject '$scope', '$http'
  
   ARTS_PATH = "/arts.json"
-  DEFAULT_ERROR_MESSAGE = "Sorry, there was an error occurred."
+  DEFAULT_ERROR_MESSAGE = "Sorry, there was an error."
 
   # initialize the controller
   initialize: ->
-    @$scope.title = "test"
     @$scope.arts = {}
     @loadArts()
-    @$scope.categoryId = 0
 
   reportError:(errorMessage=DEFAULT_ERROR_MESSAGE) ->
     @$scope.errorMessage = errorMessage
@@ -24,11 +22,3 @@ class MenuController extends BaseController
         @$scope.arts = response
       .error (response) =>
         @reportError(response["errorMessage"])
-
-  setCategory: (categoryId) ->
-    console.log("categoryId " + categoryId)
-    @$scope.categoryId = categoryId
-
-  getCategory: ->
-    console.log("returning categoryId " + @$scope.categoryId)
-    @$scope.categoryId
