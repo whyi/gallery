@@ -23,6 +23,7 @@ gem 'rails-assets-angular'
 gem 'rails-assets-angular-route'
 gem 'rails-assets-angular-bootstrap'
 gem 'rails-assets-angular-ui-router'
+gem 'social-share-button'
 
 gem 'bcrypt-ruby', :require => 'bcrypt'
 

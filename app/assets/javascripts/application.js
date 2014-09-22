@@ -14,6 +14,7 @@
 //= require "lightbox.min.js"
 //= require jquery
 //= require jquery_ujs
+//= require "jquery.share.js"
 //= require turbolinks
 //= require angular
 //= require angular-bootstrap

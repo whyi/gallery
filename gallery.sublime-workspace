@@ -24,59 +24,18 @@
 	"buffers":
 	[
 		{
+			"file": "/home/glaze/Downloads/social-master/index.html",
+			"settings":
+			{
+				"buffer_size": 5105,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 1285,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/layouts/themes.html",
-			"settings":
-			{
-				"buffer_size": 131,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/app/app.coffee",
-			"settings":
-			{
-				"buffer_size": 735,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/app/controllers/MenuController.coffee",
-			"settings":
-			{
-				"buffer_size": 856,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/arts.css.scss",
-			"settings":
-			{
-				"buffer_size": 3397,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/title.css",
-			"settings":
-			{
-				"buffer_size": 464,
-				"line_ending": "Unix",
-				"name": ".title"
-			}
-		},
-		{
-			"file": "Gemfile",
-			"settings":
-			{
-				"buffer_size": 2039,
+				"buffer_size": 2447,
 				"line_ending": "Unix"
 			}
 		},
@@ -84,7 +43,7 @@
 			"file": "app/assets/javascripts/application.js",
 			"settings":
 			{
-				"buffer_size": 907,
+				"buffer_size": 994,
 				"line_ending": "Unix"
 			}
 		},
@@ -92,15 +51,7 @@
 			"file": "app/assets/stylesheets/application.css",
 			"settings":
 			{
-				"buffer_size": 682,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/arts_controller.rb",
-			"settings":
-			{
-				"buffer_size": 536,
+				"buffer_size": 42,
 				"line_ending": "Unix"
 			}
 		}
@@ -108,11 +59,11 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -144,18 +95,78 @@
 	},
 	"file_history":
 	[
-		"/home/glaze/Documents/gallery/app/assets/javascripts/app/partials/studies.html",
-		"/home/glaze/Documents/gallery/app/assets/javascripts/application.js",
-		"/home/glaze/Documents/gallery/config/routes.rb",
+		"/home/glaze/Documents/jquery-share/example.html",
 		"/home/glaze/Documents/gallery/app/assets/stylesheets/application.css",
-		"/home/glaze/Documents/gallery/app/assets/stylesheets/articles.css.scss",
-		"/home/glaze/Documents/gallery/app/controllers/arts_controller.rb",
-		"/home/glaze/Documents/gallery/app/assets/javascripts/app/app.coffee",
+		"/home/glaze/Documents/gallery/app/assets/stylesheets/arts.css.scss",
+		"/home/glaze/Documents/gallery/app/assets/stylesheets/links.css",
 		"/home/glaze/Documents/gallery/Gemfile",
-		"/home/glaze/Documents/gallery/app/views/layouts/application.html.erb",
-		"/home/glaze/Documents/gallery/spec/spec_helper.rb",
+		"/home/glaze/Documents/gallery/public/partials/home.html",
+		"/home/glaze/Documents/gallery/app/assets/javascripts/app/app.coffee",
 		"/home/glaze/Documents/gallery/app/assets/javascripts/app/controllers/MenuController.coffee",
+		"/home/glaze/Documents/gallery/app/assets/javascripts/application.js",
+		"/home/glaze/Documents/gallery/config/initializers/social_share_button.rb",
+		"/home/glaze/Documents/gallery/config/routes.rb",
+		"/home/glaze/Documents/gallery/config/application.rb",
+		"/home/glaze/Documents/gallery/app/views/layouts/application.html.erb",
+		"/home/glaze/Documents/gallery/public/partials/studies.html",
+		"/home/glaze/Documents/gallery/app/assets/javascripts/app/controllers/BaseController.coffee",
+		"/home/glaze/Documents/gallery/app/assets/javascripts/app/controllers/ArtCarouselController.coffee",
+		"/home/glaze/Documents/gallery/app/assets/javascripts/lightbox.min.js",
+		"/home/glaze/Documents/gallery/spec/factories/users.rb",
+		"/home/glaze/Documents/gallery/public/assets/web_console/application-d6beab8d138edab38736f86f67603f3a.css",
+		"/home/glaze/Documents/gallery/public/assets/web_console/application-7e3205eb6ed6ed391775c06092ff2df7.js",
+		"/home/glaze/Documents/gallery/public/assets/web_console/application-d6beab8d138edab38736f86f67603f3a.css.gz",
+		"/home/glaze/Documents/gallery/public/assets/web_console/application-7e3205eb6ed6ed391775c06092ff2df7.js.gz",
+		"/home/glaze/Documents/gallery/app/controllers/application_controller.rb",
+		"/home/glaze/Documents/gallery/app/helpers/application_helper.rb",
+		"/home/glaze/Documents/gallery/config/application.yml",
+		"/home/glaze/Documents/gallery/app/public/home.html",
+		"/home/glaze/Documents/angular_gallery/app/partials/partial2.html",
+		"/home/glaze/Documents/angular_gallery/app/index.html",
+		"/home/glaze/Documents/gallery/public/partials/themes.html",
+		"/home/glaze/Documents/angular_gallery/app/menu.html",
+		"/home/glaze/Documents/gallery/app/assets/stylesheets/lightbox.css.erb",
+		"/home/glaze/Downloads/lightbox/css/lightbox.css",
+		"/home/glaze/Documents/gallery/public/partials/drawings.html",
+		"/home/glaze/Documents/gallery/app/assets/javascripts/angular-deckgrid.js",
+		"/home/glaze/Documents/gallery/app/assets/javascripts/app/filter.js",
+		"/home/glaze/Documents/gallery/config/database.yml",
+		"/home/glaze/Documents/gallery/app/models/user.rb",
+		"/home/glaze/Documents/gallery/app/views/sessions/profile.html.erb",
+		"/home/glaze/Documents/gallery/app/controllers/sessions_controller.rb",
+		"/home/glaze/Documents/gallery/app/controllers/users_controller.rb",
+		"/home/glaze/Documents/gallery/app/assets/stylesheets/title.css",
+		"/home/glaze/Documents/gallery/public/partials/artist_info.html",
+		"/home/glaze/Downloads/angular-deckgrid-master/angular-deckgrid.js",
 		"/home/glaze/Documents/gallery/db/seeds.rb",
+		"/home/glaze/Documents/gallery/app/controllers/arts_controller.rb",
+		"/home/glaze/Documents/gallery/app/views/arts/index.html.erb",
+		"/home/glaze/Documents/gallery/spec/factories/articles.rb",
+		"/home/glaze/Documents/gallery/app/models/art.rb",
+		"/home/glaze/Documents/gallery/tmp/cache/assets/development/sprockets/ab1ba5c712a563c5d28f008331e804a4",
+		"/home/glaze/Documents/gallery/config/initializers/inflections.rb",
+		"/home/glaze/Documents/gallery/app/views/sessions/login.html.erb",
+		"/home/glaze/Documents/gallery/config/initializers/session_store.rb",
+		"/home/glaze/Documents/gallery/app/helpers/sessions_helper.rb",
+		"/home/glaze/Documents/gallery/app/assets/javascripts/sessions.js.coffee",
+		"/home/glaze/Documents/gallery/bin/setup",
+		"/home/glaze/Documents/gallery/app/views/sessions/home.html.erb",
+		"/home/glaze/Documents/gallery/Rakefile",
+		"/home/glaze/Documents/gallery/app/views/users/new.html.erb",
+		"/home/glaze/Documents/gallery/config/environments/production.rb",
+		"/home/glaze/Documents/gallery/config/environments/development.rb",
+		"/home/glaze/Documents/gallery/db/migrate/20140920221336_create_users.rb",
+		"/home/glaze/Documents/gallery/config/environments/test.rb",
+		"/home/glaze/Documents/Delaunay/index.html",
+		"/home/glaze/Documents/Delaunay/README.md",
+		"/home/glaze/Documents/gallery/app/views/layouts/themes.html",
+		"/home/glaze/Documents/gallery/app/views/arts/new.html.erb",
+		"/home/glaze/Documents/gallery/app/views/arts/_new.html.erb",
+		"/home/glaze/Documents/gallery/app/views/_new.html.erb",
+		"/home/glaze/Documents/gallery/app/views/new.html.erb",
+		"/home/glaze/Documents/gallery/app/assets/javascripts/app/partials/studies.html",
+		"/home/glaze/Documents/gallery/app/assets/stylesheets/articles.css.scss",
+		"/home/glaze/Documents/gallery/spec/spec_helper.rb",
 		"/home/glaze/Documents/gallery/app/assets/javascripts/angular/app.coffee",
 		"/home/glaze/Documents/gallery/app/assets/javascripts/angular/controllers.coffee",
 		"/home/glaze/Documents/gallery/app/assets/javascripts/angular/services.coffee",
@@ -163,35 +174,26 @@
 		"/home/glaze/Documents/gallery/app/assets/javascripts/angular/controllers/CarouselController.coffee",
 		"/home/glaze/Documents/gallery/app/assets/javascripts/angular.js",
 		"/home/glaze/Documents/gallery/app/assets/javascripts/angular/controllers/MenuController.coffee",
-		"/home/glaze/Documents/gallery/app/public/home.html",
 		"/home/glaze/Documents/gallery/app/assets/javascripts/angular/directives.coffee",
 		"/home/glaze/Documents/gallery/app/assets/javascripts/angular/controllers/HomeController.js.coffee",
 		"/home/glaze/Documents/gallery/app/assets/javascripts/angular/main.js.coffee",
 		"/home/glaze/Documents/gallery/app/views/welcome/index.html.erb",
 		"/home/glaze/Documents/gallery/app/views/articles/new.html.erb",
 		"/home/glaze/Documents/gallery/app/views/articles/show.html.erb",
-		"/home/glaze/Documents/gallery/app/models/art.rb",
-		"/home/glaze/Documents/gallery/app/views/arts/new.html.erb",
 		"/home/glaze/Documents/gallery/app/views/arts/show.html.erb",
 		"/home/glaze/Documents/gallery/spec/models/article_spec.rb",
 		"/home/glaze/Documents/gallery/db/migrate/20140901193008_rename_article_to_art.rb",
 		"/home/glaze/Documents/gallery/db/migrate/20140831234527_arts.rb",
 		"/home/glaze/Documents/gallery/db/migrate/20140901110307_arts_add_method_and_year.rb",
-		"/home/glaze/Documents/gallery/spec/factories/articles.rb",
-		"/home/glaze/Documents/gallery/app/views/arts/index.html.erb",
 		"/home/glaze/Documents/gallery/db/migrate/20140901110032_articles_add_method_and_year.rb",
 		"/home/glaze/Documents/gallery/db/schema.rb",
 		"/home/glaze/Documents/gallery/db/migrate/20140831004115_create_arts.rb",
 		"/home/glaze/Documents/gallery/README.rdoc",
-		"/home/glaze/Documents/gallery/config/environments/development.rb",
-		"/home/glaze/Documents/gallery/config/application.yml",
-		"/home/glaze/Documents/gallery/config/database.yml",
 		"/home/glaze/Documents/gallery/db/migrate/20140901191858_rename_article_to_art.rb",
 		"/home/glaze/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/glaze/Documents/gallery/spec/models/article_sepc.rb",
 		"/home/glaze/Documents/gallery/test/models/article_spec.rb",
 		"/home/glaze/Documents/gallery/test/models/article_sepc.rb",
-		"/home/glaze/Documents/gallery/config/application.rb",
 		"/home/glaze/Documents/gallery/test/sample_spec.rb",
 		"/home/glaze/Documents/gallery/test/models/sample_spec.rb",
 		"/home/glaze/Documents/gallery/app/controllers/articles_controller.rb",
@@ -220,24 +222,7 @@
 		"/home/glaze/Documents/angularjs/angular-seed/app/menu.html",
 		"/home/glaze/Documents/angularjs/angular-seed/app/js/directives.js",
 		"/home/glaze/Documents/angularjs/angular-seed/app/js/controllers.js",
-		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/directives.coffee",
-		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/filters.coffee",
-		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/directives/menu.coffee",
-		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/app.coffee",
-		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/controllers/BaseController.coffee",
-		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/controllers/TestController1.coffee",
-		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/controllers.coffee",
-		"/home/glaze/.dosbox/dosbox-0.74.conf",
-		"/home/glaze/.xbindkeysrc",
-		"/home/glaze/Documents/angularjs/angular-seed/app/js/app.js",
-		"/home/glaze/Shortcuts/Processing.desktop",
-		"/home/glaze/Shortcuts/Truecrypt.desktop",
-		"/home/glaze/Shortcuts/Fireworks 4.desktop",
-		"/home/glaze/Shortcuts/Microsoft Word 2010.desktop",
-		"/home/glaze/Shortcuts/League of Legends.desktop",
-		"/home/glaze/Downloads/lexmark/ext/startupinstaller.sh",
-		"/usr/share/pyalienfx/usb/_debug.py",
-		"/usr/share/pyalienfx/usb/backend/libusb10.py"
+		"/home/glaze/Documents/angularjs/angular-seed/app/coffee/directives.coffee"
 	],
 	"find":
 	{
@@ -248,6 +233,10 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"*.*",
+			"*.yml",
+			"*.rb",
+			"*.*",
 			"*.coffee",
 			""
 		]
@@ -257,6 +246,37 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"shareSelector",
+			">\n",
+			"angular-social",
+			".png",
+			"url",
+			"facebook",
+			"https://www.linkedin.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png",
+			"linkedinShare",
+			"15px",
+			"gif",
+			"png",
+			"close.png",
+			"columns",
+			"content",
+			"@media",
+			"deckgrid",
+			"src",
+			"model",
+			"505050",
+			"f5f2f4",
+			".navbar-brand,",
+			".title",
+			"login_attempt",
+			"home",
+			"session",
+			"Processing.js 1.4.8 released!",
+			"ssl",
+			"isIntriangle",
+			"pt",
+			"UPLOADED_F",
+			"UPLOADED_FILE_PATH",
 			"ng-sref",
 			"function",
 			"menuJson",
@@ -288,10 +308,17 @@
 		],
 		"highlight": true,
 		"in_selection": false,
-		"preserve_case": false,
+		"preserve_case": true,
 		"regex": false,
 		"replace_history":
 		[
+			"17px",
+			"artContainer",
+			"f5f2f4",
+			"505050",
+			".navbar-brand, .navbar-default,",
+			".navbar-brand, .title",
+			"Point2D",
 			"ui-sref",
 			"arts",
 			"Art",
@@ -321,24 +348,25 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/layouts/application.html.erb",
+					"file": "/home/glaze/Downloads/social-master/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1285,
+						"buffer_size": 5105,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								720,
-								720
+								5105,
+								5105
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -349,196 +377,49 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/layouts/themes.html",
+					"file": "app/views/layouts/application.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 131,
+						"buffer_size": 2447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								50,
-								50
+								723,
+								723
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/assets/javascripts/app/app.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 735,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								655,
-								655
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/assets/javascripts/app/controllers/MenuController.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 856,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								368,
-								368
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 66.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/assets/stylesheets/arts.css.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3397,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								486,
-								486
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/assets/stylesheets/title.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 464,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								337,
-								337
-							]
-						],
-						"settings":
-						{
-							"auto_name": ".title",
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Gemfile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2039,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								634,
-								634
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
 					"file": "app/assets/javascripts/application.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 907,
+						"buffer_size": 994,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								720,
-								720
+								644,
+								644
 							]
 						],
 						"settings":
@@ -549,24 +430,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 3,
 					"file": "app/assets/stylesheets/application.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 682,
+						"buffer_size": 42,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								682,
-								682
+								42,
+								42
 							]
 						],
 						"settings":
@@ -577,36 +458,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/controllers/arts_controller.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 536,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								536,
-								536
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -658,6 +510,98 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"gemfil",
+				"Gemfile"
+			],
+			[
+				"home",
+				"public/partials/home.html"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"application.",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"sud",
+				"public/partials/studies.html"
+			],
+			[
+				"home.",
+				"public/partials/home.html"
+			],
+			[
+				"home.html",
+				"public/partials/home.html"
+			],
+			[
+				"application.rb",
+				"config/application.rb"
+			],
+			[
+				"application",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"lay",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"dra",
+				"public/partials/drawings.html"
+			],
+			[
+				"stu",
+				"public/partials/studies.html"
+			],
+			[
+				"studi",
+				"public/partials/studies.html"
+			],
+			[
+				"applica",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"artist_in",
+				"public/partials/artist_info.html"
+			],
+			[
+				"session_con",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"index.",
+				"app/views/arts/index.html.erb"
+			],
+			[
+				"index",
+				"app/views/arts/index.html.erb"
+			],
+			[
+				"session_contr",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"sessions.rb",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			]
 		],
 		"width": 0.0
 	},
