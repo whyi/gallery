@@ -1,4 +1,4 @@
-aapp = angular.module 'gallery'
+app = angular.module 'gallery'
  
 class MenuController extends BaseController
   @register app, "MenuController"

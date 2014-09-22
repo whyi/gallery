@@ -31,6 +31,3 @@ app.run( ($rootScope, $state, $stateParams) ->
   $rootScope.$stateParams = $stateParams
 )
 
-root = exports ? this
-unless root.app
-  root.app = app

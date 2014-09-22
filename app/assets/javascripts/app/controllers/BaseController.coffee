@@ -1,3 +1,5 @@
+app = angular.module 'gallery'
+
 class @BaseController
   @register: (app, name) ->
     name ?= @name || @toString().match(/function\s*(.*?)\(/)?[1]

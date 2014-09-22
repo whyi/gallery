@@ -16,10 +16,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require angular
+//= require angular-bootstrap
 //= require angular-ui-router
 //= require angular-route
-//= require angular-bootstrap
 //= require bootstrap
 //= require app/app
 //= require app/controllers/BaseController
 //= require app/controllers/MenuController
+//= require app/controllers/ArtCarouselController

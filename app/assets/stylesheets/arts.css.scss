@@ -11,6 +11,7 @@ $container-tablet: 620px;
 $screen-md: 880px;
 $screen-sm: 636px;
 
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 .navbar-container {
@@ -35,7 +36,7 @@ $screen-sm: 636px;
   margin:5px;
 }
 
-img {
+.art {
   border: 1px solid black;
   width: 100%;
   height: auto;
@@ -47,4 +48,27 @@ img {
   font-size : 9pt;
   font-weight : bold;
   color : gray;
+}
+
+.right.carousel-control, .left.carousel-control {
+    display: none;
+}
+
+.carousel-indicators {
+    top: 105%;
+}
+
+.carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70,70,70,.25);
+  width:17px;
+  height:17px;
+  margin-left:10px;
+}
+
+.carousel-indicators .active {
+  background-color: #444;
+  width:17px;
+  height:17px;
+  margin-left:10px;
 }

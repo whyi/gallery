@@ -17,7 +17,8 @@ group :development, :test do
 end
 
 gem 'bootstrap-sass'
-gem 'rails-assets-bootstrap-sass'
+gem 'autoprefixer-rails'
+
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-route'
 gem 'rails-assets-angular-bootstrap'

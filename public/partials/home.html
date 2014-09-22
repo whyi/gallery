@@ -1,1 +1,8 @@
-<h1>home</h1>
+<div ng-controller="ArtCarouselController">
+  <carousel interval="myInterval">
+    <slide ng-repeat="slide in slides" active="slide.active">
+      <img ng-src="{{slide.image}}" style="margin:auto;">
+    </slide>
+  </carousel>
+</div>
+<BR><BR>
