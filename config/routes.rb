@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :arts
   resources :users
   root 'arts#index'
+  match "/*path" => redirect("/?goto=%{path}"), via: [:get]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

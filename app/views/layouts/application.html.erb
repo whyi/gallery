@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 <html ng-app="gallery">
 <head>
-  <title>Gallery</title>
+  <title>Hyunju Kim</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-<meta name="viewport" content="user-scalable=no, width=device-width, minimum-scale=1, maximum-scale=1">
+  <base href="/" />
+  <meta name="viewport" content="user-scalable=no, width=device-width, minimum-scale=1, maximum-scale=1">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Petrona" />
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Signika" />
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Finger+Paint" />
@@ -46,13 +47,27 @@
   <div class="container">
     <div ui-view autoscroll="false" style="margin-left:50px; margin-right:50px"></div>
     <%=yield%>
-
   </div> <!-- /container -->
 </div>
 
+<div id="share"></div>
+
+<script type="text/javascript" language="JavaScript">
+$(document).ready(function () {
+
+    $('#share').share({
+        networks: ['facebook','pinterest','googleplus','twitter','linkedin','tumblr','email','stumbleupon'],
+        orientation: 'vertical',
+        urlToShare: 'http://www.whyi.net/hyunju',
+        affix: 'right center'
+    });
+});
+</script>
+  
 <div class="footer" align="center">
     &copy; 2014 / All rights reserved by Hyunju Kim 
 </div>
+
 
 </body>
 

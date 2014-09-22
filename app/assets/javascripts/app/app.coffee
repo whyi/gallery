@@ -1,7 +1,9 @@
 app = angular
   .module( 'gallery', ['ngRoute', 'ui.bootstrap', 'ui.router'])
-  .config( ['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) ->
+  .config( ['$stateProvider', '$locationProvider', ($stateProvider, $locationProvider) ->
     
+    $locationProvider.html5Mode(true).hashPrefix('!');
+
     $stateProvider
       .state('home', {
         url: "/home",
@@ -30,4 +32,4 @@ app.run( ($rootScope, $state, $stateParams) ->
   $rootScope.$state = $state
   $rootScope.$stateParams = $stateParams
 )
-
+ 
