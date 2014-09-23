@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-describe Article do
+describe Art do
   context "validation" do
     before(:each) {
-      @article = FactoryGirl.build(:article)
+      @art = FactoryGirl.build(:art)
     }
-    subject { @article }
+    subject { @art }
 
     it { should validate_presence_of("title") }
     it { should ensure_length_of("title").is_at_least(10).is_at_most(49) }

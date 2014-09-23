@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :article do
+  factory :art do
     title "test title"
     description "test description"
     category_cd 1
