@@ -1,35 +1,45 @@
 == windows
-* Download necessary files at http://1drv.ms/1rskvEC
-* 1. run the rubyinstaller-2.0.0-p576.exe
-  - set the path to c:\row\ruby200
-  - add to path
-* 2. run DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe
-  - set the path to c:\row\devkit
-* 3. extract mysql-connector-c-noinstall-6.0.2-win32 to c:\row so that you have something like
+1. Download necessary files at http://1drv.ms/1rskvEC
+2. run the rubyinstaller-2.0.0-p576.exe
+  * set the path to c:\row\ruby200
+  * add to path
+3. run DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe
+  * set the path to c:\row\devkit
+4. extract mysql-connector-c-noinstall-6.0.2-win32 to c:\row so that you have something like
+```
 	C:\row\mysql-connector-c-noinstall-6.0.2-win32\bin
-    C:\row\mysql-connector-c-noinstall-6.0.2-win32\lib
-    then add C:\row\mysql-connector-c-noinstall-6.0.2-win32\lib to current %PATH%
-* 4. run mysql-installer-web-community-5.6.20.0.exe
-  - select server only
-  - type test for password
-  - after installing add the path(C:\Program Files\MySQL\MySQL Server 5.6\bin) to current %PATH$
-  - then mysqladmin -u root -ptest password
-  - to get rid of password
-* 5. run ruby on rails console
-  - gem install rails --no-ri --no-rdoc
-  - gem install mysql2 --no-ri --no-rdoc -- with-mysql-dir=C:\row\mysql-connector-c-noinstall-6.0.2-win32
-  - get the following ruby file and test it (ruby test.rb)
-  https://raw.githubusercontent.com/lakelse/row/master/dev/mysql_test/test.rb
+  C:\row\mysql-connector-c-noinstall-6.0.2-win32\lib
+```
+then add C:\row\mysql-connector-c-noinstall-6.0.2-win32\lib to current %PATH%
+5. run mysql-installer-web-community-5.6.20.0.exe
+  * select server only
+  * type test for password
+  * after installing add the path(C:\Program Files\MySQL\MySQL Server 5.6\bin) to current %PATH$
+  * then
+```
+    mysqladmin -u root -ptest password
+```
+  * to get rid of password
+6. run ruby on rails console
+```
+  gem install rails --no-ri --no-rdoc
+  gem install mysql2 --no-ri --no-rdoc -- with-mysql-dir=C:\row\mysql-connector-c-noinstall-6.0.2-win32
+```  
+  * get the following ruby file and test it (ruby test.rb)
+  * https://raw.githubusercontent.com/lakelse/row/master/dev/mysql_test/test.rb
 
 == Database
+```
 rake db:create
 rake db:reset
 rake db:migrate
 rake db:seed
+```
 
 == Test
 * rspec will run the all test
 * to manually create a test : rails generate rspec:???? name
+
 == README
 
 This README would normally document whatever steps are necessary to get the
