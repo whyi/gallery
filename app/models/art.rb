@@ -12,7 +12,7 @@ class Art < ActiveRecord::Base
   validates :filename, presence: true
 
 	def process_uploaded_file(file)
-		name =  file.original_filename
+		name =  file["original_filename"]
 		directory = File.join(Rails.root, ENV["UPLOADED_FILE_ABSOLUTE_PATH"])
 		# create the file path
 		path = File.join(directory, name)

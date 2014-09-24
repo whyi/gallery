@@ -16,4 +16,24 @@ describe Art do
     it { should validate_inclusion_of("year").in_range(2010..Date.today.year) }
     it { should validate_presence_of("medium") }
   end
+
+  context "process_uploaded_file" do
+    let(:art) { Art.new }
+    
+    let(:file) {
+        {
+            "original_filename" => "test.png",
+            "read" => "stubbed read"
+        }
+    }
+
+    before(:each) do
+        allow(file).to receive_message_chain(:read).and_return("stubbed read")
+        allow(File).to receive_message_chain(:open, :write).and_return("stubbed")
+    end
+
+    subject { art.process_uploaded_file(file) }
+
+    it { is_expected.to eq("#{ENV["UPLOADED_FILE_RELATIVE_PATH"]}/test.png") }
+  end
 end
