@@ -185,7 +185,7 @@ DEPENDENCIES
   bcrypt-ruby
   bootstrap-sass
   coffee-rails (~> 4.0.0)
-  factory_girl_rails
+  factory_girl_rails (~> 4.0)
   figaro
   jbuilder (~> 2.0)
   jquery-rails

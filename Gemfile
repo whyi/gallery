@@ -2,15 +2,15 @@ source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
 gem 'simple_enum'
-gem 'pry', :group => :development
-gem 'pry-nav', :group => :development
 gem 'figaro'
 gem 'responders'
 group :development, :test do
-  gem 'factory_girl_rails'
+  gem "factory_girl_rails", "~> 4.0"
   gem "rspec-rails"
   gem "rspec-its"
   gem 'shoulda-matchers'
+  gem 'pry'
+  gem 'pry-nav'
 end
 
 gem 'bootstrap-sass'
