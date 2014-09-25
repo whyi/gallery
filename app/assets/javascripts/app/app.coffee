@@ -6,7 +6,7 @@ app = angular
 
     $stateProvider
       .state('home', {
-        url: "/home",
+        url: "/",
         templateUrl: "partials/home.html"
       })
       .state('studies', {

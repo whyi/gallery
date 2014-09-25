@@ -10,6 +10,7 @@ class Art < ActiveRecord::Base
   validates :width, presence: true, :inclusion => { :in => 10..200 }
   validates :height, presence: true, :inclusion => { :in => 10..200 }
   validates :filename, presence: true
+  belongs_to :user
 
 	def process_uploaded_file(file)
 		name =  file.original_filename
