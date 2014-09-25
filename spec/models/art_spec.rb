@@ -16,4 +16,23 @@ describe Art do
     it { should validate_inclusion_of("year").in_range(2010..Date.today.year) }
     it { should validate_presence_of("medium") }
   end
+
+  describe "process_uploaded_file" do
+    context "when a file is uploaded" do
+        let(:art) { Art.new }
+        let(:file) { 
+            test_image = Rails.root + "public/images/caitlyn.png"
+            Rack::Test::UploadedFile.new(test_image, "image/jpeg")
+        }
+
+        before(:each) do
+            allow(file).to receive_message_chain(:read).and_return("test")
+            allow(File).to receive_message_chain(:open, :write).and_return("stubbed")
+        end
+
+        subject { art.process_uploaded_file(file) }
+
+        it { is_expected.to eq("#{ENV["UPLOADED_FILE_RELATIVE_PATH"]}/caitlyn.png") }
+      end
+    end
 end

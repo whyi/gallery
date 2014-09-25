@@ -4,3 +4,6 @@ development:
 production:
   UPLOADED_FILE_ABSOLUTE_PATH: "public/images"
   UPLOADED_FILE_RELATIVE_PATH: "/images"
+test:
+  UPLOADED_FILE_ABSOLUTE_PATH: "public/images"
+  UPLOADED_FILE_RELATIVE_PATH: "/images"
