@@ -17,23 +17,22 @@ describe Art do
     it { should validate_presence_of("medium") }
   end
 
-  context "process_uploaded_file" do
-    let(:art) { Art.new }
-    
-    let(:file) {
-        {
-            "original_filename" => "test.png",
-            "read" => "stubbed read"
+  describe "process_uploaded_file" do
+    context "when a file is uploaded" do
+        let(:art) { Art.new }
+        let(:file) { 
+            test_image = Rails.root + "public/images/caitlyn.png"
+            Rack::Test::UploadedFile.new(test_image, "image/jpeg")
         }
-    }
 
-    before(:each) do
-        allow(file).to receive_message_chain(:read).and_return("stubbed read")
-        allow(File).to receive_message_chain(:open, :write).and_return("stubbed")
+        before(:each) do
+            allow(file).to receive_message_chain(:read).and_return("test")
+            allow(File).to receive_message_chain(:open, :write).and_return("stubbed")
+        end
+
+        subject { art.process_uploaded_file(file) }
+
+        it { is_expected.to eq("#{ENV["UPLOADED_FILE_RELATIVE_PATH"]}/caitlyn.png") }
+      end
     end
-
-    subject { art.process_uploaded_file(file) }
-
-    it { is_expected.to eq("#{ENV["UPLOADED_FILE_RELATIVE_PATH"]}/test.png") }
-  end
 end
