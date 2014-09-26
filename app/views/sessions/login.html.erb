@@ -1,9 +1,29 @@
 <% @page_title = "UserAuth | Login" -%>
-<div class= "Sign_Form">
-  <h1>Log in</h1>
-  <%= form_tag(:action => 'login') do %>
-    <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p> 
-    <p>Password:</br> <%= password_field_tag :login_password %></p> 
-    <%= submit_tag("Log In") %>
-  <% end %>
-</div>
+
+<h2>Log in</h2>
+
+<%= form_tag(:action => 'login') do %>
+  <div class="row">
+    <div class="form-group col-lg-2">
+      <%= label_tag 'Username or Email' %>
+    </div>
+    <div class="form-group col-lg-2">
+      <%= text_field_tag :username_or_email, nil, :class => 'form-control' %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-lg-2">
+      <%= label_tag 'Password' %>
+    </div>
+    <div class="form-group col-lg-2">
+      <%= password_field_tag :login_password, nil, :class => 'form-control' %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-lg-4">
+      <%= submit_tag "Log In", :class=>'btn btn-default' %>
+    </div>
+  </div>
+<% end %>
