@@ -21,6 +21,7 @@
   gem install mysql2 --no-ri --no-rdoc -- with-mysql-dir=C:\row\mysql-connector-c-noinstall-6.0.2-win32
 * get the following ruby file and test it (ruby test.rb)
 * https://raw.githubusercontent.com/lakelse/row/master/dev/mysql_test/test.rb
+* finally, open C:\row\Ruby200\lib\ruby\2.0.0 and comment out the warn line (on windows this can be safely ignored)
 
 == Database
   rake db:create
