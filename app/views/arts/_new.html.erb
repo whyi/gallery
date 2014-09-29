@@ -1,4 +1,5 @@
-<%= form_for :art, url: @path do |f| %>
+create_path : <%=@foo_path%>
+<%= form_for :art, url: @foo_path do |f| %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -40,6 +41,6 @@
   </p>
 
   <p>
-    <%= f.submit %>
+    <%= f.submit "Submit", :class=>'btn btn-primary' %>
   </p>
 <% end %>

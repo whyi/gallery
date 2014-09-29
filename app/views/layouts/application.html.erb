@@ -58,22 +58,6 @@
 </div>
 
 <div id="share"></div>
-<input type = "button" ng-click="isLoggedIn=true">
-<% if @current_user %>
-true
-<input type = "text" value="true" ng-model="isLoggedIn">
-<% else %>
-false
-<input type = "text" value="false" ng-model="isLoggedIn">
-<% end %>
-
-<% if @current_user %>
-<script type="text/javascript" language="JavaScript">
-$(document).ready(function () {
-  window.loggedIn = true;
-}
-</script>
-<% end %>
 
 <script type="text/javascript" language="JavaScript">
 $(document).ready(function () {

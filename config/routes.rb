@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  match "arts/new", :to => "arts#new", via: [:get]
+  match "arts/create", :to => "arts#create", via: [:post]
   match "arts/:params", :to => "arts#admin", via: [:get]
   resources :arts
   resources :users

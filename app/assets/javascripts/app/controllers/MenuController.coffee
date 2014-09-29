@@ -12,11 +12,6 @@ class MenuController extends BaseController
   initialize: ->
     @$scope.arts = {}
     @loadArts()
-    @$scope.loggedIn = @$window.loggedIn
-    console.log("@$scope.loggedIn " + @$scope.loggedIn)
-    @$scope.$watch("loggedIn", () =>
-      console.log("watch : @$scope.loggedIn " + @$scope.loggedIn)
-    )
 
   reportError:(errorMessage=DEFAULT_ERROR_MESSAGE) ->
     @$scope.errorMessage = errorMessage
