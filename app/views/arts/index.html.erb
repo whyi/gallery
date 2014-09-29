@@ -1,0 +1,18 @@
+<% if @current_user %>
+admin pages.. here
+<%=@arts %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @arts.each do |art| %>
+    <tr>
+      <td><%= art.title %></td>
+    </tr>
+  <% end %>
+</table>
+<% end %>
+
+

@@ -8,12 +8,13 @@ class SessionsController < ApplicationController
   end
 
   def login
-    authorized_user = User.authenticate(params[:username_or_email],params[:login_password])
+    authorized_user = User.authenticate(params[:username_or_email], params[:login_password])
     if authorized_user
       session[:user_id] = authorized_user.id
       flash[:notice] = "Wow Welcome again, you logged in as #{authorized_user.username}"
       redirect_to(:controller => 'arts', :action => 'index')
     else
+      flash[:notice] = "Wrong username or password"
       render "login"
     end
   end

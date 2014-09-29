@@ -3,7 +3,7 @@ app = angular.module 'gallery'
 class MenuController extends BaseController
   @register app, "MenuController"
 
-  @inject '$scope', '$http', '$location', '$state'
+  @inject '$scope', '$http', '$window'
  
   ARTS_PATH = "/arts.json"
   DEFAULT_ERROR_MESSAGE = "Sorry, there was an error."
@@ -12,12 +12,6 @@ class MenuController extends BaseController
   initialize: ->
     @$scope.arts = {}
     @loadArts()
-    @redirect()
-
-  redirect: ->
-    url = @$location.search()
-    if url['goto']?
-      @$state.go(url['goto'])
 
   reportError:(errorMessage=DEFAULT_ERROR_MESSAGE) ->
     @$scope.errorMessage = errorMessage

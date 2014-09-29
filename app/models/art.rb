@@ -12,6 +12,10 @@ class Art < ActiveRecord::Base
   validates :filename, presence: true
   belongs_to :user
 
+  def self.find_all_by_category(category)
+    Art.where(:category_cd=>Art.categories[category]).all
+  end
+
 	def process_uploaded_file(file)
 		name =  file.original_filename
 		directory = File.join(Rails.root, ENV["UPLOADED_FILE_ABSOLUTE_PATH"])
