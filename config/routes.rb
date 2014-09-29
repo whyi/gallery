@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  match "arts/:params", :to => "arts#admin", via: [:get]
   resources :arts
   resources :users
   root 'arts#index'

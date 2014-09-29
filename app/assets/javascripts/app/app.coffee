@@ -1,8 +1,6 @@
 app = angular
   .module( 'gallery', ['ngRoute', 'ui.bootstrap', 'ui.router'])
-  .config( ['$stateProvider', '$locationProvider', ($stateProvider, $locationProvider) ->
-    
-    $locationProvider.html5Mode(true).hashPrefix('!');
+  .config( ['$stateProvider', ($stateProvider) ->
 
     $stateProvider
       .state('home', {

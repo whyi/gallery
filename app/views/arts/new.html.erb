@@ -1,45 +1,4 @@
-<%= form_for :art, url: arts_path do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
- 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
-
-  <p>
-    <%= f.label :medium %><br>
-    <%= f.text_field :medium %>
-  </p>
- 
-  <p>
-    <%= f.label :category %><br>
-    <%= select :art, :category_cd, enum_option_pairs(Art, :category, true) %>
-  </p>
-
-  <p>
-    <%= f.label :width %><br>
-    <%= f.select :width, options_for_select(10..100)%>
-  </p>
-
-  <p>
-    <%= f.label :height %><br>
-    <%= f.select :height, options_for_select(10..100)%>
-  </p>
-
-  <p>
-    <%= f.label :year %><br>
-    <%= f.select :year, options_for_select(2010..Date.today.year)%>
-  </p>
-
-  <p>
-    <%= f.label :file %><br>
-    <%= f.file_field :filename %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%=
+@path = art_path
+render :partial => "arts/new"
+%>

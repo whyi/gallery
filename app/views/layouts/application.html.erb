@@ -33,13 +33,20 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li ng-class="{ active: $state.includes('studies') }"><a ui-sref="studies" class = "links">studies</a></li>
-        <li ng-class="{ active: $state.includes('themes') }"><a ui-sref="themes" class = "links">themes</a></li>
-        <li ng-class="{ active: $state.includes('drawings') }"><a ui-sref="drawings"  class = "links">drawings</a></li>
+        <% if @current_user %>
+          <li class=<%= "active" if params[:params] == "studies"%>><a href="arts/studies" class = "links">studies</a></li>
+          <li class=<%= "active" if params[:params] == "themes"%>><a href="arts/themes" class = "links">themes</a></li>
+          <li class=<%= "active" if params[:params] == "drawings"%>><a href="arts/drawings" class = "links">drawings</a></li>
+        <% else %>
+          <li ng-class="{ active: $state.includes('studies') }"><a ui-sref="studies" class = "links">studies</a></li>
+          <li ng-class="{ active: $state.includes('themes') }"><a ui-sref="themes" class = "links">themes</a></li>
+          <li ng-class="{ active: $state.includes('drawings') }"><a ui-sref="drawings"  class = "links">drawings</a></li>
+        <% end %>
+
         <li ng-class="{ active: $state.includes('artist_info') }"><a ui-sref="artist_info" class = "links">artist info</a></li>
         <% if @current_user %>
-          <li><a href = "#"><%=@current_user.username%> profile</a></li>
-          <li><a href = "/logout">logout</a></li>
+          <li><a href = "#" class = "links"><%=@current_user.username%> profile</a></li>
+          <li><a href = "/logout" class = "links">logout</a></li>
         <% end %>        
       </ul>
     </div><!--/.nav-collapse -->
@@ -51,6 +58,22 @@
 </div>
 
 <div id="share"></div>
+<input type = "button" ng-click="isLoggedIn=true">
+<% if @current_user %>
+true
+<input type = "text" value="true" ng-model="isLoggedIn">
+<% else %>
+false
+<input type = "text" value="false" ng-model="isLoggedIn">
+<% end %>
+
+<% if @current_user %>
+<script type="text/javascript" language="JavaScript">
+$(document).ready(function () {
+  window.loggedIn = true;
+}
+</script>
+<% end %>
 
 <script type="text/javascript" language="JavaScript">
 $(document).ready(function () {
