@@ -1,5 +1,5 @@
 create_path : <%=@foo_path%>
-<%= form_for :art, url: @foo_path do |f| %>
+<%= form_for :art, :html => {:multipart => true}, url: @foo_path do |f| %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>

@@ -205,7 +205,7 @@ DEPENDENCIES
   rails-assets-angular-route
   rails-assets-angular-ui-router
   responders
-  rmagick (~> 2.13.2)
+  rmagick (~> 2.13.3)
   rspec-its
   rspec-rails
   sass-rails (~> 4.0.3)

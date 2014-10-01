@@ -41,7 +41,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # for image uploads
 # https://github.com/whyi/gallery/issues/36
 gem "carrierwave"
-gem 'rmagick', '~> 2.13.2'
+gem 'rmagick', '~> 2.13.3', :require => 'RMagick'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
