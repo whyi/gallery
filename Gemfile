@@ -38,7 +38,11 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-gem 'rmagick', '~> 2.13.2'
+# for image uploads
+# https://github.com/whyi/gallery/issues/36
+gem "carrierwave"
+gem 'rmagick', '~> 2.13.3', :require => 'RMagick'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

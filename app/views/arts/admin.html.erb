@@ -1,12 +1,10 @@
-<h2>admin pages</h2>
-
 <%=link_to "new", new_art_path, :class=>'btn btn-default' %>
 <div class="row-fluid">
 <% @arts.each do |art| %>
   <div class="col-xs-4 col-sm-3 col-md-2">
     <div class="imageContainer">
-        <a href="/images/idiocracy.jpg" data-lightbox="arts">
-          <img class="art" src="<%=art.filename%>">
+        <a href="<%=art.filename_url.to_s%>" data-lightbox="arts">
+          <%=image_tag art.filename_url(:thumb).to_s, :class=>'art' %>
         </a>
         <%=link_to "edit", edit_art_path(art), :class=>'btn btn-primary' %> |
         <%=link_to "delete", art_path(art.id), :method => :delete, :class=>'btn btn-danger' %>

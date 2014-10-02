@@ -3,7 +3,7 @@ app = angular.module 'gallery'
 class MenuController extends BaseController
   @register app, "MenuController"
 
-  @inject '$scope', '$http', '$window'
+  @inject '$scope', '$http', '$window', '$state'
  
   ARTS_PATH = "/arts.json"
   DEFAULT_ERROR_MESSAGE = "Sorry, there was an error."

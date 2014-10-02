@@ -1,43 +1,42 @@
-create_path : <%=@foo_path%>
-<%= form_for :art, url: @foo_path do |f| %>
+<%= form_for :art, :html => {:multipart => true}, url: @path do |f| %>
   <p>
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class=>"form-control" %>
   </p>
  
   <p>
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class=>"form-control" %>
   </p>
 
   <p>
     <%= f.label :medium %><br>
-    <%= f.text_field :medium %>
+    <%= f.text_field :medium, :class=>"form-control" %>
   </p>
  
   <p>
     <%= f.label :category %><br>
-    <%= select :art, :category_cd, enum_option_pairs(Art, :category, true) %>
+    <%= select :art, :category_cd, enum_option_pairs(Art, :category, true), {}, {:class=>"form-control"} %>
   </p>
 
   <p>
     <%= f.label :width %><br>
-    <%= f.select :width, options_for_select(10..100)%>
+    <%= f.select(:width, options_for_select(10..100), {}, {:class=>"form-control"})%>
   </p>
 
   <p>
     <%= f.label :height %><br>
-    <%= f.select :height, options_for_select(10..100)%>
+    <%= f.select(:height, options_for_select(10..100), {}, {:class=>"form-control"})%>
   </p>
 
   <p>
     <%= f.label :year %><br>
-    <%= f.select :year, options_for_select(2010..Date.today.year)%>
+    <%= f.select(:year, options_for_select(Date.today.year..2010), {}, {:class=>"form-control"})%>
   </p>
 
   <p>
     <%= f.label :file %><br>
-    <%= f.file_field :filename %>
+    <%= f.file_field :filename, :class=>"form-control" %>
   </p>
 
   <p>

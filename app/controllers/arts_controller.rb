@@ -13,7 +13,7 @@ class ArtsController < ApplicationController
 
 	def create
 	  @art = Art.new(art_params)
-	  @art.process_uploaded_file(art_params[:filename])
+	  #@art.process_uploaded_file(art_params[:filename])
 	  @art.save
 	  redirect_to @art
 	end
@@ -22,17 +22,14 @@ class ArtsController < ApplicationController
 	  @art = Art.find(params[:id])
 
 	  file_updated = true
-	  if art_params[:filename]
-	   	file_updated = @art.process_uploaded_file(art_params[:filename])
-	  end
 
 	  if file_updated
 	  	art_params[:filename] = @art.filename
 	  	# create a new art_params which has all data but filename
 	  	# then assgin file name as art_params[:filename] = @art.filename
-	  	foo = art_params;
-	  	foo[:filename] = @art.filename#binding.pry
-	  	if @art.update_attributes(foo)
+	  	foo = art_params
+	  	foo[:filename] = @art.filename
+	  	if @art.update_attributes(art_params)
 	  		redirect_to session.delete(:return_to)
 	  	end
 	  else

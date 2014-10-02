@@ -10,20 +10,9 @@ class Art < ActiveRecord::Base
   validates :width, presence: true, :inclusion => { :in => 10..200 }
   validates :height, presence: true, :inclusion => { :in => 10..200 }
   validates :filename, presence: true
-  belongs_to :user
+  mount_uploader :filename, ImageUploader
 
   def self.find_all_by_category(category)
     Art.where(:category_cd=>Art.categories[category]).all
   end
-
-	def process_uploaded_file(file)
-		name =  file.original_filename
-		directory = File.join(Rails.root, ENV["UPLOADED_FILE_ABSOLUTE_PATH"])
-		# create the file path
-		path = File.join(directory, name)
-		# write the file
-		File.open(path, "wb") { |f| f.write(file.read) }
-    # remove the path(original file path) from here
-		self.filename = File.join(ENV["UPLOADED_FILE_RELATIVE_PATH"], name)
-	end
 end
