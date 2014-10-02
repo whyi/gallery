@@ -1,7 +1,9 @@
 <div class="row-fluid">
   <div class="col-xs-4 col-sm-3 col-md-2" ng-repeat="art in arts | filter:{category_cd:2}">
     <div class="imageContainer">
-        <img class="art" src="" data-ng-src = "{{art.filename}}" class="img-center">
+        <a href="{{art.filename.url}}" data-lightbox="roadtrip">
+        <img class="art" src="" data-ng-src = "{{art.filename.thumb.url}}" class="img-center">
+        </a>
     </div>
   </div>
 </div>

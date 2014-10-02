@@ -23,6 +23,10 @@ app = angular
         url: "/artist_info",
         templateUrl: "partials/artist_info.html"
       })
+      .state('login', {
+        url: "/login",
+        templateUrl: "partials/login.html"
+      })      
     ]
 )
 
