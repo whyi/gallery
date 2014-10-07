@@ -8,5 +8,6 @@ FactoryGirl.define do
     filename "foo.jpg"
     medium "oil on canvas"
     year 2014
+    user_id 1
   end
 end

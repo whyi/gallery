@@ -21,12 +21,18 @@ describe Art do
   context 
   let(:user) { FactoryGirl.create(:user) }
   before do
-    # This code is not idiomatically correct.
-    @art = Art.new(content: "Lorem ipsum", user_id: user.id)
+    @art = Art.new(FactoryGirl.attributes_for(:art))
   end
 
   subject { @art }
 
-  it { should respond_to(:content) }
+  it { should respond_to(:title) }
+  it { should respond_to(:description) }
+  it { should respond_to(:medium) }
+  it { should respond_to(:category_cd) }
+  it { should respond_to(:width) }
+  it { should respond_to(:height) }
+  it { should respond_to(:filename) }
+  it { should respond_to(:year) }
   it { should respond_to(:user_id) }
 end

@@ -1,7 +1,6 @@
 require 'simple_enum'
 
 class Art < ActiveRecord::Base
-  attr_accessible :title, :description, :medium
 	as_enum :category, studies: 0, themes: 1, drawings: 2
 	validates :title, presence: true, length: { in: 10...50 }
   validates :description, presence: true
