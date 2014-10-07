@@ -17,4 +17,16 @@ describe Art do
     it { should validate_presence_of("medium") }
     it { should validate_presence_of("user_id") }
   end
+
+  context 
+  let(:user) { FactoryGirl.create(:user) }
+  before do
+    # This code is not idiomatically correct.
+    @art = Art.new(content: "Lorem ipsum", user_id: user.id)
+  end
+
+  subject { @art }
+
+  it { should respond_to(:content) }
+  it { should respond_to(:user_id) }
 end
