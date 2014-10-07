@@ -15,5 +15,6 @@ describe Art do
     it { should validate_presence_of("year") }
     it { should validate_inclusion_of("year").in_range(2010..Date.today.year) }
     it { should validate_presence_of("medium") }
+    it { should validate_presence_of("user_id") }
   end
 end

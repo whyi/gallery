@@ -9,8 +9,8 @@ group :development, :test do
   gem "rspec-rails"
   gem "rspec-its"
   gem 'shoulda-matchers'
-  #gem 'pry'
-  #gem 'pry-nav'
+  gem 'pry'
+  gem 'pry-nav'
 end
 
 gem 'bootstrap-sass'

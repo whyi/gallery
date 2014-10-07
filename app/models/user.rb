@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
   after_save :clear_password
+  has_many :arts
+  #attr_accessible :user_id
 
   def self.authenticate(username_or_email="", login_password="")
     if EMAIL_REGEX.match(username_or_email)

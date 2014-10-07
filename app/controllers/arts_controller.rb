@@ -12,9 +12,7 @@ class ArtsController < ApplicationController
 	end	
 
 	def create
-	  @art = Art.new(art_params)
-	  #@art.process_uploaded_file(art_params[:filename])
-	  @art.save
+	  @art = @current_user.arts.create!(art_params)
 	  redirect_to @art
 	end
 

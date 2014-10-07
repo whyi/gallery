@@ -1,6 +1,7 @@
 require 'simple_enum'
 
 class Art < ActiveRecord::Base
+  attr_accessible :title, :description, :medium
 	as_enum :category, studies: 0, themes: 1, drawings: 2
 	validates :title, presence: true, length: { in: 10...50 }
   validates :description, presence: true
@@ -10,7 +11,9 @@ class Art < ActiveRecord::Base
   validates :width, presence: true, :inclusion => { :in => 10..200 }
   validates :height, presence: true, :inclusion => { :in => 10..200 }
   validates :filename, presence: true
+  validates :user_id, presence: true
   mount_uploader :filename, ImageUploader
+  belongs_to :user
 
   def self.find_all_by_category(category)
     Art.where(:category_cd=>Art.categories[category]).all

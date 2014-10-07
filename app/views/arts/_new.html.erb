@@ -31,7 +31,7 @@
 
   <p>
     <%= f.label :year %><br>
-    <%= f.select(:year, options_for_select(Date.today.year..2010), {}, {:class=>"form-control"})%>
+    <%= f.select(:year, options_for_select(2010..Date.today.year), {}, {:class=>"form-control"})%>
   </p>
 
   <p>
