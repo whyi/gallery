@@ -14,7 +14,9 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'support/spec_test_helper'
 RSpec.configure do |config|
+  config.include SpecTestHelper, :type => :controller
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
