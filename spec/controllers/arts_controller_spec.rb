@@ -50,27 +50,20 @@ RSpec.describe ArtsController, :type => :controller do
 
   context 'given user is logged in' do
     before(:each) {
-      art = create(:art)
-      art.filename = "foo"
-      allow(Art).to receive(:find).and_return(art)
-      session[:return_to] = "some_url"
+      @art = create(:art)
+      allow(Art).to receive("find").with("1234").and_return(@art)
+      allow(request).to receive("referer").and_return("some_url")
       user = create(:user)
       login(user)
     }
 
     describe "when delete an art" do
-      subject { post :destroy, :id => 1234 }
+      subject { post :destroy, :id => "1234" }
 
       it "should blah blah lbah" do
-        expect(subject).to redirect_to('some_url')
-        expect(Art).to receive(:find).with(art)
+        expect(subject).to redirect_to("some_url")
+        expect(Art).to receive("find").with("1234")
       end
     end
   end
-  #http://icebergist.com/posts/rspec-and-factorygirl-setup-for-testing-carrierwave-uploaders/
-  #http://icebergist.com/posts/rspec-and-factorygirl-setup-for-testing-carrierwave-uploaders/
-  #http://icebergist.com/posts/rspec-and-factorygirl-setup-for-testing-carrierwave-uploaders/
-  #http://icebergist.com/posts/rspec-and-factorygirl-setup-for-testing-carrierwave-uploaders/
-  #http://icebergist.com/posts/rspec-and-factorygirl-setup-for-testing-carrierwave-uploaders/
-  #http://icebergist.com/posts/rspec-and-factorygirl-setup-for-testing-carrierwave-uploaders/
 end

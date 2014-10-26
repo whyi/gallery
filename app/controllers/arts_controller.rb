@@ -7,6 +7,7 @@ class ArtsController < ApplicationController
 	end
 
 	def destroy
+		binding.pry
 		Art.find(params[:id]).destroy()
 		redirect_to session.delete(:return_to)
 	end	
@@ -56,12 +57,9 @@ class ArtsController < ApplicationController
 	  end
 
 	  def store_prev_url
-	  	# bug : store if different
-	  	# else bypass
-	  	# how to?!@
-			session[:return_to] ||= request.referer
-			if session[:return_to] != request.referer
-				session[:return_to] = request.referer
-			end
+		session[:return_to] ||= request.referer
+		if session[:return_to] != request.referer
+			session[:return_to] = request.referer
 		end
+	end
 end
