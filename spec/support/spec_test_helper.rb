@@ -9,6 +9,10 @@ module SpecTestHelper
     request.session[:user_id] = user.id
   end
 
+  def logout(user)
+    request.session[:user_id] = nil
+  end  
+
   def current_user
     User.find(request.session[:user_id])
   end
