@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
  
   match "signup", :to => "users#new", via: [:get]
-  match "login", :to => "sessions#login", via: [:get, :post]
+  match "login", :to => "sessions#login", via: [:get]
+  match "login_attempt", :to => "sessions#login_attempt", via: [:post]
   match "logout", :to => "sessions#logout", via: [:get]
   match "profile", :to => "sessions#profile", via: [:get]
   match "setting", :to => "sessions#setting", via: [:get]
@@ -26,7 +27,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  # ExaZZmple resource route with options:
+  # Example resource route with options:
   #   resources :products do
   #     member do
   #       get 'short'
