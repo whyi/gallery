@@ -1,6 +1,6 @@
 app = angular
-  .module( 'gallery', ['ngRoute', 'ui.bootstrap', 'ui.router'])
-  .config( ['$stateProvider', ($stateProvider) ->
+  .module('gallery', ['ngRoute', 'ui.bootstrap', 'ui.router'])
+  .config(['$stateProvider', ($stateProvider) ->
 
     $stateProvider
       .state('home', {

@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessor :password
   EMAIL_REGEX = /\S[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\z/i
-  validates :username, :presence => true, :uniqueness => true, :length => { :in => 3..20 }
   validates :email,
     :presence => true,
     :uniqueness => true,
@@ -15,7 +14,6 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   after_save :clear_password
   has_many :arts
-  #attr_accessible :user_id
 
   def self.authenticate(username_or_email="", login_password="")
     if EMAIL_REGEX.match(username_or_email)

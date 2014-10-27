@@ -2,14 +2,6 @@
 <div class="Sign_Form">
   <h1>Sign Up</h1>
   <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
-    <div class="row">
-      <div class="form-group col-lg-2">
-        <%= label_tag 'Username' %>
-      </div>
-      <div class="form-group col-lg-2">
-        <%= f.text_field :username, :class => 'form-control' %></p>
-      </div>
-    </div>
 
     <div class="row">
       <div class="form-group col-lg-2">

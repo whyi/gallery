@@ -43,7 +43,7 @@
 
         <li ng-class="{ active: $state.includes('artist_info') }"><a ui-sref="artist_info" class = "links">artist info</a></li>
         <% if @current_user %>
-          <li><a href = "#" class = "links"><%=@current_user.username%> profile</a></li>
+          <li><a href = "#" class = "links"><%=@current_user.email%> profile</a></li>
           <li><a href = "/logout" class = "links">logout</a></li>
         <% end %>        
       </ul>
