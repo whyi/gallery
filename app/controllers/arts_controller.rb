@@ -7,7 +7,6 @@ class ArtsController < ApplicationController
 	end
 
 	def destroy
-		#binding.pry
 		Art.find(params[:id]).destroy()
 		redirect_to session.delete(:return_to)
 	end	
