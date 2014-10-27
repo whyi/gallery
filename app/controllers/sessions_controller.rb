@@ -8,6 +8,10 @@ class SessionsController < ApplicationController
   end
 
   def login
+    if Rails.env.development?
+      flash[:danger] = "Sign up is not available on production!"
+      #redirect_to(:controller => 'arts', :action => 'index')
+    end
   end
 
   def login_attempt
