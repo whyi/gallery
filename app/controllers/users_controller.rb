@@ -11,15 +11,15 @@ class UsersController < ApplicationController
   def create
     if Rails.env.development?
       flash[:danger] = "Sign up is not available on production!"
-      #redirect_to(:controller => 'arts', :action => 'index')
-    end
-
-    @user = User.new(user_params)
-    if @user.save!
-      flash[:notice] = "You signed up successfully"
+      redirect_to(:controller => 'arts', :action => 'index')
     else
-      flash[:danger] = "Failed to sign up"
-      render "new"
+      @user = User.new(user_params)
+      if @user.save!
+        flash[:notice] = "You signed up successfully"
+      else
+        flash[:danger] = "Failed to sign up"
+        render "new"
+      end
     end
   end
 
