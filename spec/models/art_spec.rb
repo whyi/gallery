@@ -11,17 +11,14 @@ describe Art do
     it { should validate_inclusion_of("width").in_range(10..200) }
     it { should validate_presence_of("height") }
     it { should validate_inclusion_of("height").in_range(10..200) }
-    it { should validate_presence_of("filename") }
     it { should validate_presence_of("year") }
     it { should validate_inclusion_of("year").in_range(2010..Date.today.year) }
     it { should validate_presence_of("medium") }
     it { should validate_presence_of("user_id") }
   end
 
-  context 
-  let(:user) { FactoryGirl.create(:user) }
   before do
-    @art = Art.new(FactoryGirl.attributes_for(:art))
+    @art = create(:art)
   end
 
   subject { @art }

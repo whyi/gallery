@@ -1,7 +1,7 @@
 class ArtsController < ApplicationController
 	before_filter :store_prev_url, :only => [:index, :admin, :destroy]
-	before_filter :authenticate_user_and_redirect, :only => [:new, :create]
-	before_filter :authenticate_user, :only => [:index, :show, :edit, :delete]
+	before_filter :authenticate_user_and_redirect, :only => [:new, :create, :destroy]
+	before_filter :authenticate_user, :only => [:index, :show, :edit]
 
 	def new
 	end
@@ -19,18 +19,9 @@ class ArtsController < ApplicationController
 	def update
 	  @art = Art.find(params[:id])
 
-	  file_updated = true
-
-	  if file_updated
-	  	art_params[:filename] = @art.filename
-	  	# create a new art_params which has all data but filename
-	  	# then assgin file name as art_params[:filename] = @art.filename
-	  	foo = art_params
-	  	foo[:filename] = @art.filename
-	  	if @art.update_attributes(art_params)
-	  		redirect_to session.delete(:return_to)
-	  	end
-	  else
+  	if @art.update_attributes(art_params)
+  		redirect_to session.delete(:return_to)
+  	else
 	  	render 'edit'
 	  end
 	end
@@ -65,12 +56,9 @@ class ArtsController < ApplicationController
 	  end
 
 	  def store_prev_url
-	  	# bug : store if different
-	  	# else bypass
-	  	# how to?!@
-			session[:return_to] ||= request.referer
-			if session[:return_to] != request.referer
-				session[:return_to] = request.referer
-			end
+		session[:return_to] ||= request.referer
+		if session[:return_to] != request.referer
+			session[:return_to] = request.referer
 		end
+	end
 end
