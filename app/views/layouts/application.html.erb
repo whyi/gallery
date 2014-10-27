@@ -16,9 +16,7 @@
 
 <body ng-controller="MenuController">
 
-<% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, class: name %>
-<% end -%>
+<%= render 'layouts/messages' %>
 
 <div class="navbar navbar-default navbar-top" role="navigation">
   <div class="container navbar-container">
