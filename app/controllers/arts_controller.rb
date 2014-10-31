@@ -13,7 +13,6 @@ class ArtsController < ApplicationController
 
 	def create
 	  @art = @current_user.arts.create!(art_params)
-	  redirect_to @art
 	end
 
 	def update
@@ -51,11 +50,12 @@ class ArtsController < ApplicationController
 	end
 
 	private
-	  def art_params
-	    params.require(:art).permit(:title, :description, :category_cd, :width, :height, :filename, :medium, :year)
-	  end
 
-	  def store_prev_url
+  def art_params
+    params.require(:art).permit(:title, :description, :category_cd, :width, :height, :filename, :medium, :year)
+  end
+
+  def store_prev_url
 		session[:return_to] ||= request.referer
 		if session[:return_to] != request.referer
 			session[:return_to] = request.referer

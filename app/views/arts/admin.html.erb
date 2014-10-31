@@ -3,7 +3,8 @@
 <% @arts.each do |art| %>
   <div class="col-xs-4 col-sm-3 col-md-2">
     <div class="imageContainer">
-        <a href="<%=art.filename_url.to_s%>" data-lightbox="arts">
+        <a href="<%=art.filename_url.to_s%>" data-lightbox="arts"
+           data-title="<%=art.title%>, <%=art.width%>x<%=art.height%>, <%=art.medium%>, <%=art.year%>">
           <%=image_tag art.filename_url(:thumb).to_s, :class=>'art' %>
         </a>
         <%=link_to "edit", edit_art_path(art), :class=>'btn btn-primary' %> |
