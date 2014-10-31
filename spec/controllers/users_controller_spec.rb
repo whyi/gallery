@@ -22,9 +22,9 @@ RSpec.describe UsersController, :type => :controller do
   end
 
   describe "POST create" do
-    it "returns http success for valid user params" do
+    it "redirects to root" do
       post :create, user: attributes_for(:user)
-      expect(response).to be_success
+      expect(subject).to redirect_to root_path
     end
 
     it "raises error for invalid user params" do

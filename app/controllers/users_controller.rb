@@ -2,19 +2,21 @@ class UsersController < ApplicationController
   before_filter :save_login_state, :only => [:new, :create]
 
   def new
-    if Rails.env.development?
+    if Rails.env.production?
+      redirect_to root_path
       flash[:danger] = "Sign up is not available on production!"
-      redirect_to(:controller => 'arts', :action => 'index')
     end
   end
 
   def create
-    if Rails.env.development?
+    if Rails.env.production?
+      redirect_to root_path
       flash[:danger] = "Sign up is not available on production!"
-      redirect_to(:controller => 'arts', :action => 'index')
     else
       @user = User.new(user_params)
       if @user.save!
+        session[:user_id] = @user.id
+        redirect_to root_path
         flash[:notice] = "You signed up successfully"
       else
         flash[:danger] = "Failed to sign up"

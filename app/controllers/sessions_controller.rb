@@ -4,13 +4,13 @@ class SessionsController < ApplicationController
 
   def logout
     session[:user_id] = nil
-    redirect_to :action => 'login'
+    redirect_to root_path
   end
 
   def login
-    if Rails.env.development?
+    if Rails.env.production?
+      redirect_to root_path
       flash[:danger] = "Sign up is not available on production!"
-      #redirect_to(:controller => 'arts', :action => 'index')
     end
   end
 
@@ -18,11 +18,11 @@ class SessionsController < ApplicationController
     authorized_user = User.authenticate(params[:username_or_email], params[:login_password])
     if authorized_user
       session[:user_id] = authorized_user.id
-      redirect_to(:controller => 'arts', :action => 'index')
+      redirect_to root_path
       flash[:notice] = "You logged in as #{authorized_user.email}"
     else
+      redirect_to(:controller => 'sessions', :action => 'login')
       flash[:danger] = "Wrong username or password"
-      render "login"
     end
   end
 end

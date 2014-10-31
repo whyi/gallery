@@ -13,8 +13,8 @@ RSpec.describe SessionsController, :type => :controller do
     describe "when logout" do
       subject { post :logout }
 
-      it "render the login form" do
-        expect(subject).to redirect_to(:action => 'login')
+      it "redirects to root" do
+        expect(subject).to redirect_to root_path
       end
 
       it "should set session[:id] to null" do
@@ -40,8 +40,8 @@ RSpec.describe SessionsController, :type => :controller do
     describe "when logout" do
       subject { post :logout }
 
-      it "render the login form" do
-        expect(subject).to redirect_to(:action => 'login')
+      it "redirects to root" do
+        expect(subject).to redirect_to root_path
       end
 
       it "should set session[:id] to null" do
