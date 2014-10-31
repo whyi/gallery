@@ -3,10 +3,7 @@
     <div class="imageContainer">
         <a href="{{art.filename.url}}"
            data-lightbox="themes"
-           data-title="title : {{art.title}}<BR>
-           {{art.width}} by {{art.height}}<BR>
-           {{art.medium}}<BR>
-           {{art.year}}">>
+           data-title="{{art.title}}, {{art.width}}x{{art.height}}, {{art.medium}}, {{art.year}}">
         <img class="art" src="" data-ng-src = "{{art.filename.thumb.url}}" class="img-center">
         </a>
     </div>
