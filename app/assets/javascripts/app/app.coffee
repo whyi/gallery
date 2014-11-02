@@ -1,31 +1,31 @@
-app = angular
-  .module('gallery', ['ngRoute', 'ui.bootstrap', 'ui.router'])
-  .config(['$stateProvider', ($stateProvider) ->
+app = angular.module('gallery', ['ngRoute', 'ui.bootstrap', 'ui.router'])
+app.sitePrefix = "hyunju_v1"
+app.config(['$stateProvider', ($stateProvider) ->
 
     $stateProvider
       .state('home', {
         url: "/",
-        templateUrl: "partials/home.html"
+        templateUrl: app.sitePrefix + "/partials/home.html"
       })
       .state('studies', {
         url: "/studies",
-        templateUrl: "partials/studies.html"
+        templateUrl: app.sitePrefix + "/partials/studies.html"
       })
       .state('themes', {
         url: "/themes",
-        templateUrl: "partials/themes.html"
+        templateUrl: app.sitePrefix + "/partials/themes.html"
       })
       .state('drawings', {
         url: "/drawings",
-        templateUrl: "partials/drawings.html"
+        templateUrl: app.sitePrefix + "/partials/drawings.html"
       })
       .state('artist_info', {
         url: "/artist_info",
-        templateUrl: "partials/artist_info.html"
+        templateUrl: app.sitePrefix + "/partials/artist_info.html"
       })
       .state('login', {
         url: "/login",
-        templateUrl: "partials/login.html"
+        templateUrl: app.sitePrefix + "/partials/login.html"
       })      
     ]
 )

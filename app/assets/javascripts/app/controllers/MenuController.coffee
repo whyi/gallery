@@ -5,7 +5,7 @@ class MenuController extends BaseController
 
   @inject '$scope', '$http', '$window', '$state'
  
-  ARTS_PATH = "/arts.json"
+  ARTS_PATH = app.sitePrefix + "/arts.json"
   DEFAULT_ERROR_MESSAGE = "Sorry, there was an error."
 
   # initialize the controller
