@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-gem 'simple_enum'
+gem 'simple_enum', '~> 1.6.9'
 gem 'figaro'
 gem 'responders'
 group :development, :test do
@@ -15,7 +15,7 @@ end
 
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
-
+gem 'therubyracer'
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-route'
 gem 'rails-assets-angular-bootstrap'
