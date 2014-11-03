@@ -32,9 +32,9 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <% if @current_user %>
-          <li class=<%= "active" if params[:params] == "studies"%>><a href="arts/studies" class = "links">studies</a></li>
-          <li class=<%= "active" if params[:params] == "themes"%>><a href="arts/themes" class = "links">themes</a></li>
-          <li class=<%= "active" if params[:params] == "drawings"%>><a href="arts/drawings" class = "links">drawings</a></li>
+          <li class=<%= "active" if params[:params] == "studies"%>><a href="<%=config.relative_url_root%>/arts/studies" class = "links">studies</a></li>
+          <li class=<%= "active" if params[:params] == "themes"%>><a href="<%=config.relative_url_root%>/arts/themes" class = "links">themes</a></li>
+          <li class=<%= "active" if params[:params] == "drawings"%>><a href="<%=config.relative_url_root%>/arts/drawings" class = "links">drawings</a></li>
         <% else %>
           <li ng-class="{ active: $state.includes('studies') }"><a ui-sref="studies" class = "links">studies</a></li>
           <li ng-class="{ active: $state.includes('themes') }"><a ui-sref="themes" class = "links">themes</a></li>
@@ -44,7 +44,7 @@
         <li ng-class="{ active: $state.includes('artist_info') }"><a ui-sref="artist_info" class = "links">artist info</a></li>
         <% if @current_user %>
           <li><a href = "#" class = "links"><%=@current_user.email%> profile</a></li>
-          <li><a href = "/logout" class = "links">logout</a></li>
+          <li><a href = "/hyunju_v1/logout" class = "links">logout</a></li>
         <% end %>        
       </ul>
     </div><!--/.nav-collapse -->
