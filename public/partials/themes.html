@@ -1,10 +1,10 @@
 <div class="row-fluid">
   <div class="col-xs-4 col-sm-3 col-md-2" ng-repeat="art in arts | filter:{category_cd:1}">
     <div class="imageContainer">
-        <a href="{{art.filename.url}}"
+        <a href="{{prefix}}{{art.filename.url}}"
            data-lightbox="themes"
            data-title="{{art.title}}, {{art.width}}x{{art.height}}, {{art.medium}}, {{art.year}}">
-        <img class="art" src="" data-ng-src="{{art.filename.thumb.url}}" class="img-center">
+        <img class="art" src="" data-ng-src="{{prefix}}{{art.filename.thumb.url}}" class="img-center">
         </a>
     </div>
   </div>

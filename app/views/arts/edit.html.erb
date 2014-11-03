@@ -16,8 +16,11 @@
   </p>
  
   <p>
-    <%= f.label :category %><br>
-    <%= select :art, :category_cd, enum_option_pairs(Art, :category, true) %>
+    <select class="form-control" id="art_category_cd" name="art[category_cd]">
+        <option value="0">Studies</option>
+        <option value="1">Themes</option>
+        <option value="2">Drawings</option>
+    </select>
   </p>
 
   <p>

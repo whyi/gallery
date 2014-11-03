@@ -11,6 +11,7 @@ class MenuController extends BaseController
   # initialize the controller
   initialize: ->
     @$scope.arts = {}
+    @$scope.prefix = app.sitePrefix
     @loadArts()
 
   reportError:(errorMessage=DEFAULT_ERROR_MESSAGE) ->
