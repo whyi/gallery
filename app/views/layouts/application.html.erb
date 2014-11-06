@@ -44,7 +44,7 @@
         <li ng-class="{ active: $state.includes('artist_info') }"><a ui-sref="artist_info" class = "links">artist info</a></li>
         <% if @current_user %>
           <li><a href = "#" class = "links"><%=@current_user.email%> profile</a></li>
-          <li><a href = "/hyunju_v1/logout" class = "links">logout</a></li>
+          <li><a href = "<%=config.relative_url_root%>/logout" class = "links">logout</a></li>
         <% end %>        
       </ul>
     </div><!--/.nav-collapse -->
