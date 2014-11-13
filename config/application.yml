@@ -1,9 +1,0 @@
-development:
-  UPLOADED_FILE_ABSOLUTE_PATH: "public/images"
-  UPLOADED_FILE_RELATIVE_PATH: "/images"
-production:
-  UPLOADED_FILE_ABSOLUTE_PATH: "public/images"
-  UPLOADED_FILE_RELATIVE_PATH: "/images"
-test:
-  UPLOADED_FILE_ABSOLUTE_PATH: "public/images"
-  UPLOADED_FILE_RELATIVE_PATH: "/images"
