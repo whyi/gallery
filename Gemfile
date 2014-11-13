@@ -15,7 +15,8 @@ end
 
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
-gem 'therubyracer'
+gem 'libv8', '~> 3.11.8.3'
+gem 'therubyracer', :platform => :ruby
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-route'
 gem 'rails-assets-angular-bootstrap'
