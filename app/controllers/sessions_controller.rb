@@ -8,10 +8,6 @@ class SessionsController < ApplicationController
   end
 
   def login
-    if Rails.env.production?
-      redirect_to root_path
-      flash[:danger] = "Sign up is not available on production!"
-    end
   end
 
   def login_attempt
