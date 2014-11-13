@@ -2,7 +2,7 @@ require 'simple_enum'
 
 class Art < ActiveRecord::Base
 	as_enum :category, studies: 0, themes: 1, drawings: 2
-	validates :title, presence: true, length: { in: 10...50 }
+	validates :title, presence: true, length: { in: 4...50 }
   validates_presence_of :description
   validates_presence_of :medium
   validates :category_cd, presence: true, :inclusion => { :in => 0..2 }
