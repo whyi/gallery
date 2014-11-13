@@ -75,5 +75,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Use sub-uri in production
-  config.relative_url_root = '/hyunju_v1'
+  config.relative_url_root = '/hyunju'
 end
