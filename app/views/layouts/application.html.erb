@@ -4,6 +4,10 @@
 <html ng-app="gallery">
 <head>
   <title>Hyunju Kim</title>
+  <script type="text/javascript" language="JavaScript">
+    // site prefix
+    window.sitePrefix = "<%=config.relative_url_root%>";
+  </script>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -59,7 +63,6 @@
 
 <script type="text/javascript" language="JavaScript">
 $(document).ready(function () {
-
     $('#share').share({
         networks: ['facebook','pinterest','googleplus','twitter','linkedin','tumblr','email','stumbleupon'],
         orientation: 'vertical',

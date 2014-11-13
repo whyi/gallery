@@ -1,7 +1,8 @@
 app = angular.module('gallery', ['ngRoute', 'ui.bootstrap', 'ui.router'])
-app.sitePrefix = "hyunju_v1"
-app.config(['$stateProvider', ($stateProvider) ->
 
+app.sitePrefix = window.sitePrefix
+
+app.config(['$stateProvider', ($stateProvider) ->
     $stateProvider
       .state('home', {
         url: "/",
