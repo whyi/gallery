@@ -15,8 +15,8 @@ class ArtsService
     $redis.set("arts", Art.all.to_json) unless @art.nil?
   end
 
-  def self.update
+  def self.update(params)
     @art = Art.find(params[:id])
-    $redis.set("arts", Art.all.to_json) if @art.update_attributes(art_params)
+    $redis.set("arts", Art.all.to_json) if @art.update_attributes(params)
   end
 end
