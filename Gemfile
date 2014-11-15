@@ -11,8 +11,10 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'pry'
   gem 'pry-nav'
+  gem 'mock_redis'
 end
 
+gem 'redis', '~> 3.1.0'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'libv8', '~> 3.11.8.3'

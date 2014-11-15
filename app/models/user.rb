@@ -15,11 +15,9 @@ class User < ActiveRecord::Base
   after_save :clear_password
   has_many :arts
 
-  def self.authenticate(username_or_email="", login_password="")
-    if EMAIL_REGEX.match(username_or_email)
-      user = User.find_by_email(username_or_email)
-    else
-      user = User.find_by_username(username_or_email)
+  def self.authenticate(email="", login_password="")
+    if EMAIL_REGEX.match(email)
+      user = User.find_by_email(email)
     end
 
     if user && user.match_password(login_password)

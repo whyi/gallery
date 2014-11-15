@@ -78,6 +78,7 @@ GEM
     method_source (0.8.2)
     mime-types (2.3)
     minitest (5.4.1)
+    mock_redis (0.13.2)
     multi_json (1.10.1)
     mysql2 (0.3.16)
     pry (0.10.1)
@@ -119,6 +120,7 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    redis (3.1.0)
     ref (1.0.5)
     responders (1.1.1)
       railties (>= 3.2, < 4.2)
@@ -200,6 +202,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   libv8 (~> 3.11.8.3)
+  mock_redis
   mysql2 (~> 0.3.16)
   pry
   pry-nav
@@ -208,6 +211,7 @@ DEPENDENCIES
   rails-assets-angular-bootstrap
   rails-assets-angular-route
   rails-assets-angular-ui-router
+  redis (~> 3.1.0)
   responders
   rmagick (~> 2.13.3)
   rspec-its

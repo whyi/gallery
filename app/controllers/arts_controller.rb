@@ -1,3 +1,5 @@
+require 'arts_service'
+
 class ArtsController < ApplicationController
 	before_filter :store_prev_url, :only => [:index, :admin, :destroy]
 	before_filter :authenticate_user_and_redirect, :only => [:new, :create, :destroy]
@@ -12,13 +14,11 @@ class ArtsController < ApplicationController
 	end	
 
 	def create
-	  @art = @current_user.arts.create!(art_params)
+	  arts_service.create(art_params)
 	end
 
 	def update
-	  @art = Art.find(params[:id])
-
-  	if @art.update_attributes(art_params)
+  	if ArtsService.update(params)
   		redirect_to session.delete(:return_to)
   	else
 	  	render 'edit'
@@ -30,7 +30,7 @@ class ArtsController < ApplicationController
 	end
 
 	def index
-		@arts = Art.all
+		@arts = ArtsService.get_arts
 		respond_to do |format|
 			format.html
 			format.json { render json: @arts }

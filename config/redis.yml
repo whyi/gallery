@@ -1,0 +1,18 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+default: &default
+  host: 127.0.0.1
+  port: 6379
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
