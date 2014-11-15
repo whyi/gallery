@@ -1,11 +1,12 @@
 == windows
 * Download necessary files at http://1drv.ms/1rskvEC
 * run the rubyinstaller-2.0.0-p576.exe
-  * set the path to c:\row\ruby200
+  * set the path to `c:\row\ruby200`
   * add to path
 * run DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe
-  * set the path to c:\row\devkit
+  * set the path to `c:\row\devkit`
 * extract mysql-connector-c-noinstall-6.0.2-win32 to c:\row so that you have something like
+
 	C:\row\mysql-connector-c-noinstall-6.0.2-win32\bin
   C:\row\mysql-connector-c-noinstall-6.0.2-win32\lib
 * then add C:\row\mysql-connector-c-noinstall-6.0.2-win32\lib to current %PATH%
