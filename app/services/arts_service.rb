@@ -10,8 +10,8 @@ class ArtsService
     @arts
   end
 
-  def self.create(art_params)
-    @art = @current_user.arts.create!(art_params)
+  def self.create(art_params, current_user)
+    @art = current_user.arts.create!(art_params)
     $redis.set("arts", Art.all.to_json) unless @art.nil?
   end
 

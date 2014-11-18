@@ -14,7 +14,7 @@ class ArtsController < ApplicationController
 	end	
 
 	def create
-	  arts_service.create(art_params)
+	  ArtsService.create(art_params, @current_user)
 	end
 
 	def update
