@@ -61,8 +61,7 @@ RSpec.describe ArtsController, :type => :controller do
       subject { post :destroy, :id => "1234" }
 
       it "should delete and redirect" do
-        expect(Art).to receive("find").with("1234")
-        expect(@art).to receive("destroy")
+        expect(ArtsService).to receive("destroy").with("1234")
         expect(subject).to redirect_to("previous_url")
       end
     end

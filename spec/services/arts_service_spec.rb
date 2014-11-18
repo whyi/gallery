@@ -50,4 +50,17 @@ RSpec.describe ArtsService do
       ArtsService.update(art.attributes.with_indifferent_access)
     end
   end
+
+  describe "destroy" do
+    before(:each) {
+      $redis = MockRedis.new
+      allow(Art).to receive(:find).with(art["id"]).and_return(art)
+      allow($redis).to receive(:set).with("arts", art.to_json)
+    }
+
+    it "should repopulate the redis cache" do
+      expect($redis).to receive(:set).with("arts", "[]")
+      ArtsService.destroy(art["id"])
+    end
+  end  
 end
