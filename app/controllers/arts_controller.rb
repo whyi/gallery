@@ -9,7 +9,7 @@ class ArtsController < ApplicationController
 	end
 
 	def destroy
-		ArtsService.destroy(params[:id]);
+		ArtsService.destroy(params[:id])
 		redirect_to session.delete(:return_to)
 	end	
 
