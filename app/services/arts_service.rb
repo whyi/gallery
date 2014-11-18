@@ -19,4 +19,8 @@ class ArtsService
     @art = Art.find(params[:id])
     $redis.set("arts", Art.all.to_json) if @art.update_attributes(params)
   end
+
+  def self.destroy(id)
+    $redis.set("arts", Art.all.to_json) if Art.find(id).destroy()
+  end
 end
