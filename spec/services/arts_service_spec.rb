@@ -47,7 +47,7 @@ RSpec.describe ArtsService do
 
     it "should repopulate the redis cache" do
       expect($redis).to receive(:set).with("arts", Art.all.to_json)
-      ArtsService.update(art.attributes.with_indifferent_access)
+      ArtsService.update(art["id"], art.attributes.with_indifferent_access)
     end
   end
 
