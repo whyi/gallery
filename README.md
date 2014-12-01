@@ -8,8 +8,10 @@
 * run ```DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe```
   * set the path to ```c:\\row\\devkit```
 * extract ```mysql-connector-c-noinstall-6.0.2-win32``` to ```c:\row``` so that you have something like
-	```C:\row\mysql-connector-c-noinstall-6.0.2-win32\bin```
-  ```C:\row\mysql-connector-c-noinstall-6.0.2-win32\lib```
+  ```
+  C:\row\mysql-connector-c-noinstall-6.0.2-win32\bin
+  C:\row\mysql-connector-c-noinstall-6.0.2-win32\lib
+  ```
 * then add ```C:\row\mysql-connector-c-noinstall-6.0.2-win32\lib``` to current %PATH%
 * run ```mysql-installer-web-community-5.6.20.0.exe```
   * select server only
