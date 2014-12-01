@@ -17,25 +17,29 @@
 * run ```mysql-installer-web-community-5.6.20.0.exe```
   * select server only
   * type test for password
-  * after installing add the path(```C:\Program Files\MySQL\MySQL Server 5.6\bin```) to current %PATH$
+  * after installing add the path(```C:\Program Files\MySQL\MySQL Server 5.6\bin```) to current %PATH%
   * then
     ```mysqladmin -u root -ptest password```
   * to get rid of password
 * run ruby on rails console
-  ```gem install rails --no-ri --no-rdoc```
-  ```gem install mysql2 --no-ri --no-rdoc -- with-mysql-dir=C:\row\mysql-connector-c-noinstall-6.0.2-win32```
+  ```
+  gem install rails --no-ri --no-rdoc
+
+  gem install mysql2 --no-ri --no-rdoc -- with-mysql-dir=C:\row\mysql-connector-c-noinstall-6.0.2-win32
+  ```
 * get the following ruby file and test it (ruby test.rb)
 * https://raw.githubusercontent.com/lakelse/row/master/dev/mysql_test/test.rb
 * Double click and install the ImageMagick, make sure to follow the instruction on http://www.redmine.org/projects/redmine/wiki/HowTo_install_rmagick_gem_on_Windows
 * bundle install should be working now.
-* finally, open C:\row\Ruby200\lib\ruby\2.0.0 and comment out the warn line (on windows this can be safely ignored)
+* finally, open ```C:\row\Ruby200\lib\ruby\2.0.0``` and comment out the warn line (on windows this can be safely ignored)
 
 ## Database
+```
   rake db:create
   rake db:reset
   rake db:migrate
   rake db:seed
-
+```
 ## Test
 * rspec will run the all test
 * to manually create a test : rails generate rspec:???? name
