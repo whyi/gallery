@@ -1,51 +1,69 @@
-<h2>editing resource</h2>
+<h2>Edit</h2>
 <%= form_for @art do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
+  <input hidden name="id" value="<%=@art.id%>">
+  <div class="form-group">
+    <%= f.label :title, :class=>"col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :title, :class=>"form-control", :maxlength => 30, :size => 30 %>
+    </div>
+  </div>
  
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
+  <div class="form-group">
+    <%= f.label :description, :class=>"col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :description, :class=>"form-control" %>
+    </div>
+  </div>
 
-  <p>
-    <%= f.label :medium %><br>
-    <%= f.text_field :medium %>
-  </p>
+  <div class="form-group">
+    <%= f.label :medium, :class=>"col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :medium, :class=>"form-control" %>
+    </div>
+  </div>
  
-  <p>
-    <select class="form-control" id="art_category_cd" name="art[category_cd]">
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="art_category">Category</label>
+    <div class="col-sm-10">
+      <select class="form-control" id="art_category_cd" name="art[category_cd]">
         <option value="0">Studies</option>
         <option value="1">Themes</option>
         <option value="2">Drawings</option>
-    </select>
-  </p>
-
-  <p>
-    <%= f.label :width %><br>
-    <%= f.select :width, options_for_select(10..100)%>
-  </p>
-
-  <p>
-    <%= f.label :height %><br>
-    <%= f.select :height, options_for_select(10..100)%>
-  </p>
-
-  <p>
-    <%= f.label :year %><br>
-    <%= f.select :year, options_for_select(2010..Date.today.year)%>
-  </p>
-
-  <p>
-    <%= f.label :file %><br>
-    <%= f.file_field :filename %>
-  </p>
-
-  <p>
-    <div class="actions">
-    <%= f.submit "Update" %>
+      </select>
     </div>
-  </p>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :width, :class=>"col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.select(:width, options_for_select(10..100), {}, {:class=>"form-control"})%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :height, :class=>"col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.select(:height, options_for_select(10..100), {}, {:class=>"form-control"})%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :year, :class=>"col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.select(:year, options_for_select(2010..Date.today.year), {}, {:class=>"form-control"})%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :file, :class=>"col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.file_field :filename, :class=>"form-control" %>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.submit "Update", :class=>'btn btn-primary' %>
+  </div>
+
 <% end %>
