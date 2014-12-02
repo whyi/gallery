@@ -43,3 +43,22 @@
 ## Test
 * rspec will run the all test
 * to manually create a test : rails generate rspec:???? name
+
+## Release
+### Assets path
+* Assets (mostly SASS and CSS files) need to be updated properly in case of deploying under a subdirectory of WWWROOT.
+* ```bundle exec rake assets:precompile RAILS_RELATIVE_URL_ROOT='/SUB_URI'```
+### .htaccess for Passenger Phusion (or maybe Bluehost-specific thing)
+```
+<IfModule mod_passenger.c>
+RewriteEngine On
+RewriteBase /SUB_URI
+Options -MultiViews
+PassengerResolveSymlinksInDocumentRoot on
+#Set this to whatever environment you'll be running in
+RailsEnv production
+RackBaseURI /SUB_URI
+PassengerAppRoot THE_ABSOLUTE_PATH_OF_THE_APP
+SetEnv GEM_HOME THE_ABSOLUTE_PATH_OF_THE_LOCAL_GEM_DIRECTORY
+</IfModule>
+``` 
