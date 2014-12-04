@@ -18,10 +18,10 @@ class ArtsController < ApplicationController
 	end
 
 	def update
-	  	if ArtsService.update(params)
-  			redirect_to session.delete(:return_to)
+  		if ArtsService.update(params[:id], art_params)
+	  		redirect_to session.delete(:return_to)
   		else
-		  	render 'edit'
+	  		render 'edit'
 		end
 	end
 
