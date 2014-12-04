@@ -14,15 +14,15 @@ class ArtsController < ApplicationController
 	end	
 
 	def create
-	  ArtsService.create(art_params, @current_user)
+		ArtsService.create(art_params, @current_user)
 	end
 
 	def update
-  	if ArtsService.update(params)
-  		redirect_to session.delete(:return_to)
-  	else
-	  	render 'edit'
-	  end
+	  	if ArtsService.update(params)
+  			redirect_to session.delete(:return_to)
+  		else
+		  	render 'edit'
+		end
 	end
 
 	def edit
@@ -38,7 +38,7 @@ class ArtsController < ApplicationController
 	end
 
 	def show
-  	@art = Art.find(params[:id])
+	  	@art = Art.find(params[:id])
 	end
 
 	def admin
@@ -51,11 +51,11 @@ class ArtsController < ApplicationController
 
 	private
 
-  def art_params
-    params.require(:art).permit(:title, :description, :category_cd, :width, :height, :filename, :medium, :year)
-  end
+	def art_params
+		params.require(:art).permit(:title, :description, :category_cd, :width, :height, :filename, :medium, :year)
+	end
 
-  def store_prev_url
+	def store_prev_url
 		session[:return_to] ||= request.referer
 		if session[:return_to] != request.referer
 			session[:return_to] = request.referer
